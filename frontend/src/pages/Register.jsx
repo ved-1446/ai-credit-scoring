@@ -124,6 +124,10 @@ export function Register() {
             </div>
           </div>
 
+          <p className="text-xs text-slate-400">
+            This is a demo. Please use made-up details, not your real personal or financial information.
+          </p>
+
           <button
             type="submit"
             disabled={loading || success}
@@ -138,6 +142,10 @@ export function Register() {
               </>
             )}
           </button>
+
+          <p className="text-xs text-slate-400 text-center">
+            The first sign-in after a quiet period can take up to a minute while the server wakes up.
+          </p>
         </form>
 
         <div className="text-center text-sm text-slate-400">

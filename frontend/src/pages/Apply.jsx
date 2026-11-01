@@ -410,6 +410,10 @@ export function Apply() {
       )}
 
       <form onSubmit={handleSubmit} onKeyDown={handleFormKeyDown} className="space-y-8">
+        <p className="text-xs text-slate-400">
+          This is a demo. Please use made-up details, not your real personal or financial information.
+        </p>
+
         {/* 1. About You */}
         <section id="sec-about" className="bg-slate-800/60 rounded-2xl border border-slate-700/60 p-6 backdrop-blur-xl shadow-xl scroll-mt-36">
           <div className="flex items-center justify-between mb-6 pb-3 border-b border-slate-700/60">

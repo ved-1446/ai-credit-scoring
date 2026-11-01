@@ -70,6 +70,9 @@ export function Consent() {
         )}
 
         <div className="space-y-4 text-sm text-slate-300 leading-relaxed bg-slate-900/60 p-6 rounded-xl border border-slate-800">
+          <p className="text-xs text-slate-400">
+            This is a demo. Please use made-up details, not your real personal or financial information.
+          </p>
           <p>
             Before submitting your application for automated credit risk assessment, please review and acknowledge how your data will be processed:
           </p>

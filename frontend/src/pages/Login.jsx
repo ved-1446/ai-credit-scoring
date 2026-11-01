@@ -105,6 +105,10 @@ export function Login() {
               </>
             )}
           </button>
+
+          <p className="text-xs text-slate-400 text-center">
+            The first sign-in after a quiet period can take up to a minute while the server wakes up.
+          </p>
         </form>
 
         <div className="text-center text-sm text-slate-400">
