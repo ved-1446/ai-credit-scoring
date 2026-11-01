@@ -1,0 +1,45 @@
+{
+  "id": "risk_levels",
+  "title": "Understanding Risk Levels",
+  "topic": "results",
+  "keywords_en": [
+    "risk levels",
+    "risk band",
+    "low",
+    "medium",
+    "high",
+    "very high",
+    "meaning of risk level",
+    "band threshold",
+    "0.0658",
+    "0.1315",
+    "0.2631",
+    "observed default rate",
+    "validation data"
+  ],
+  "keywords_hi": [
+    "jokhim star",
+    "risk band",
+    "kam jokhim",
+    "madhyam jokhim",
+    "jyada jokhim",
+    "high risk",
+    "\u091c\u094b\u0916\u093f\u092e \u0938\u094d\u0924\u0930",
+    "\u0915\u092e \u091c\u094b\u0916\u093f\u092e",
+    "\u092e\u0927\u094d\u092f\u092e \u091c\u094b\u0916\u093f\u092e",
+    "\u0909\u091a\u094d\u091a \u091c\u094b\u0916\u093f\u092e"
+  ],
+  "keywords_mr": [
+    "jokhim patali",
+    "risk level",
+    "kami jokhim",
+    "madhyam jokhim",
+    "jast jokhim",
+    "high risk",
+    "\u091c\u094b\u0916\u0940\u092e \u092a\u093e\u0924\u0933\u0940",
+    "\u0915\u092e\u0940 \u091c\u094b\u0916\u0940\u092e",
+    "\u092e\u0927\u094d\u092f\u092e \u091c\u094b\u0916\u0940\u092e",
+    "\u091c\u093e\u0938\u094d\u0924 \u091c\u094b\u0916\u0940\u092e"
+  ],
+  "body": "Predictions are grouped into four risk levels using cutoffs from validation data: LOW (0.0% to 6.58%, observed default rate 2.84%), MEDIUM (6.58% to 13.15%, observed default rate 7.56%), HIGH (13.15% to 26.31%, observed default rate 18.28%), and VERY HIGH (26.31% to 100.0%, observed default rate 30.88%). The decision flag threshold is 13.15%. These rates come from validation sample data and are not promises."
+}

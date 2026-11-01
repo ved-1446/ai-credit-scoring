@@ -1,0 +1,42 @@
+# Version control
+.git
+.gitignore
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Virtual environments
+.venv
+venv
+backend/.venv
+env/
+ENV/
+
+# Dependencies & build outputs
+**/node_modules
+**/dist
+**/build
+**/.next
+
+# Python cache & artifacts
+**/__pycache__
+**/.pytest_cache
+**/*.pyc
+**/*.pyo
+**/*.pyd
+sitecustomize.py
+**/sitecustomize.py
+
+# Datasets and exploratory notebooks
+data
+notebooks
+
+# Local database and logs
+dev.db
+*.db
+*.sqlite
+*.sqlite3
+*.log
+artifacts/model_metadata.backup.json

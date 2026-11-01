@@ -1,0 +1,49 @@
+{
+  "id": "privacy_and_consent",
+  "title": "Privacy, Consent, and Google Sharing",
+  "topic": "privacy",
+  "keywords_en": [
+    "privacy",
+    "consent",
+    "is my data sent to google",
+    "google sharing",
+    "data storage",
+    "personal information",
+    "security",
+    "pii",
+    "what is stored",
+    "safe",
+    "secure",
+    "hashed password",
+    "chat questions",
+    "gemini service",
+    "free service"
+  ],
+  "keywords_hi": [
+    "gopniyata",
+    "privacy",
+    "kya mera data google ko jata hai",
+    "consent",
+    "suraksha",
+    "data chori",
+    "surakshit",
+    "\u0917\u094b\u092a\u0928\u0940\u092f\u0924\u093e",
+    "\u0915\u094d\u092f\u093e \u092e\u0947\u0930\u093e \u0921\u093e\u091f\u093e \u0917\u0942\u0917\u0932 \u0915\u094b \u091c\u093e\u0924\u093e \u0939\u0948",
+    "\u0938\u0941\u0930\u0915\u094d\u0937\u093e",
+    "\u0938\u0939\u092e\u0924\u093f",
+    "\u0938\u0941\u0930\u0915\u094d\u0937\u093f\u0924 \u0939\u0948"
+  ],
+  "keywords_mr": [
+    "gopaniyata",
+    "privacy",
+    "majha data google kade jato ka",
+    "samati",
+    "suraksha",
+    "surakshit",
+    "\u0917\u094b\u092a\u0928\u0940\u092f\u0924\u093e",
+    "\u092e\u093e\u091d\u0940 \u092e\u093e\u0939\u093f\u0924\u0940 \u0938\u0941\u0930\u0915\u094d\u0937\u093f\u0924 \u0906\u0939\u0947 \u0915\u093e",
+    "\u0938\u0941\u0930\u0915\u094d\u0937\u093e",
+    "\u0938\u0902\u092e\u0924\u0940"
+  ],
+  "body": "This is a demo, so please do not enter real personal details you want kept private. The demo stores your account (name, email and a protected, hashed password), your application answers, your results and the saved explanation text. Your chat questions are not stored. To write explanations, only the risk level, a rounded percentage and plain reason names are sent to Google's Gemini service, never your name, email, income or loan amounts. Your chat question text IS sent to Gemini, so do not type personal details in the chat. On Google's free service, text sent may be used to improve Google's products."
+}

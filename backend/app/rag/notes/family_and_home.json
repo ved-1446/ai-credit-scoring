@@ -1,0 +1,50 @@
+{
+  "id": "family_and_home",
+  "title": "Family, Housing, and Assets",
+  "topic": "inputs",
+  "keywords_en": [
+    "family size",
+    "children",
+    "household",
+    "housing type",
+    "car ownership",
+    "property ownership",
+    "dependents",
+    "house",
+    "realty",
+    "family status"
+  ],
+  "keywords_hi": [
+    "pariwar",
+    "bacche",
+    "ghar",
+    "makaan",
+    "gadi",
+    "car",
+    "sampatti",
+    "grahasthi",
+    "\u092a\u0930\u093f\u0935\u093e\u0930",
+    "\u092c\u091a\u094d\u091a\u0947",
+    "\u0918\u0930",
+    "\u092e\u0915\u093e\u0928",
+    "\u0917\u093e\u0921\u093c\u0940",
+    "\u0915\u093e\u0930",
+    "\u0938\u0902\u092a\u0924\u094d\u0924\u093f"
+  ],
+  "keywords_mr": [
+    "kutumb",
+    "mule",
+    "ghar",
+    "gadi",
+    "malamatta",
+    "vastu",
+    "vahana",
+    "\u0915\u0941\u091f\u0941\u0902\u092c",
+    "\u092e\u0941\u0932\u0947",
+    "\u0918\u0930",
+    "\u0917\u093e\u0921\u0940",
+    "\u092e\u093e\u0932\u092e\u0924\u094d\u0924\u093e",
+    "\u0935\u093e\u0939\u0928"
+  ],
+  "body": "Family size, number of children, housing type, car ownership, and property ownership describe household circumstances. The model looks at this together with your other answers. Its effect can go either way depending on the values, and the result page shows which way each factor pushed your estimate."
+}

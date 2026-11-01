@@ -1,0 +1,33 @@
+{
+  "id": "how_explanations_work",
+  "title": "How Explanations Are Generated",
+  "topic": "explanations",
+  "keywords_en": [
+    "explanations",
+    "how explanations work",
+    "main factors list",
+    "gemini summary",
+    "rule based",
+    "ai writer",
+    "paragraph"
+  ],
+  "keywords_hi": [
+    "vyakhya kaise banti hai",
+    "explanation",
+    "karan",
+    "ai writer",
+    "gemini explanation",
+    "\u0935\u094d\u092f\u093e\u0916\u094d\u092f\u093e \u0915\u0948\u0938\u0947 \u092c\u0928\u0924\u0940 \u0939\u0948",
+    "\u0938\u094d\u092a\u0937\u094d\u091f\u0940\u0915\u0930\u0923"
+  ],
+  "keywords_mr": [
+    "spashtikaran kase bante",
+    "explanation",
+    "karane",
+    "ai lekhak",
+    "gemini explanation",
+    "\u0938\u094d\u092a\u0937\u094d\u091f\u0940\u0915\u0930\u0923 \u0915\u0938\u0947 \u092c\u0928\u0924\u0947",
+    "\u0915\u093e\u0930\u0923\u0947"
+  ],
+  "body": "Explanations combine rule-based factor extraction with an AI summary writer. The main factors list is created directly from the model's feature contributions using fixed rules. When available, Google Gemini writes a readable summary paragraph from these safe facts, but the AI writer cannot change the calculated risk score."
+}

@@ -1,0 +1,44 @@
+{
+  "id": "fairness_and_gender",
+  "title": "Fairness and Use of Demographic Inputs",
+  "topic": "fairness",
+  "keywords_en": [
+    "fairness",
+    "gender",
+    "does the model use gender",
+    "demographics",
+    "flagged rate ratio",
+    "bias",
+    "parity",
+    "equal treatment",
+    "limitation",
+    "warning sign",
+    "0.516",
+    "claim of fairness"
+  ],
+  "keywords_hi": [
+    "pakshpat",
+    "gender",
+    "kya model gender use karta hai",
+    "ling",
+    "bhedbhav",
+    "fairness",
+    "\u092a\u0915\u094d\u0937\u092a\u093e\u0924",
+    "\u0915\u094d\u092f\u093e \u092e\u0949\u0921\u0932 \u091c\u0947\u0902\u0921\u0930 \u0909\u092a\u092f\u094b\u0917 \u0915\u0930\u0924\u093e \u0939\u0948",
+    "\u0932\u093f\u0902\u0917",
+    "\u092d\u0947\u0926\u092d\u093e\u0935"
+  ],
+  "keywords_mr": [
+    "pakshapat",
+    "gender",
+    "model gender vaparto ka",
+    "ling",
+    "bhedbhav",
+    "fairness",
+    "\u092a\u0915\u094d\u0937\u092a\u093e\u0924",
+    "\u092e\u0949\u0921\u0947\u0932 \u091c\u0947\u0902\u0921\u0930 \u0935\u093e\u092a\u0930\u0924\u094b \u0915\u093e",
+    "\u0932\u093f\u0902\u0917",
+    "\u092d\u0947\u0926\u092d\u093e\u0935"
+  ],
+  "body": "Yes, this demo model uses gender and age as inputs, because it was trained with them. That is a limitation, not a strength: in some places lenders are not allowed to use gender in credit decisions. The result page keeps gender and age out of the main reasons list and mentions them in a separate note, but they still affect the score. The admin fairness page shows that one gender group was flagged about half as often as the other (ratio 0.516). That gap is a warning sign. It does not prove the model is fair or unfair, and we make no claim of fairness."
+}

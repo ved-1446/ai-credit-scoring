@@ -1,0 +1,49 @@
+{
+  "id": "model_technical_details",
+  "title": "Model Technical Details and Metrics",
+  "topic": "model",
+  "keywords_en": [
+    "technical",
+    "metrics",
+    "roc auc",
+    "pr auc",
+    "threshold",
+    "precision",
+    "recall",
+    "hyperparameters",
+    "model columns",
+    "0.6974",
+    "0.1553",
+    "0.1315",
+    "0.168",
+    "0.4175",
+    "226 columns"
+  ],
+  "keywords_hi": [
+    "takniki vivran",
+    "metrics",
+    "roc auc",
+    "pr auc",
+    "threshold",
+    "precision",
+    "recall",
+    "takniki",
+    "\u0924\u0915\u0928\u0940\u0915\u0940 \u0935\u093f\u0935\u0930\u0923",
+    "\u092e\u0947\u091f\u094d\u0930\u093f\u0915\u094d\u0938",
+    "\u0925\u094d\u0930\u0947\u0936\u0939\u094b\u0932\u094d\u0921"
+  ],
+  "keywords_mr": [
+    "tantrik tapashil",
+    "metrics",
+    "roc auc",
+    "pr auc",
+    "threshold",
+    "precision",
+    "recall",
+    "tantrik",
+    "\u0924\u093e\u0902\u0924\u094d\u0930\u093f\u0915 \u0924\u092a\u0936\u0940\u0932",
+    "\u092e\u0947\u091f\u094d\u0930\u093f\u0915\u094d\u0938",
+    "\u0925\u094d\u0930\u0947\u0936\u0939\u094b\u0932\u094d\u0921"
+  ],
+  "body": "For the curious: on the test data the model's ROC-AUC was 0.6974 and PR-AUC 0.1553, with a flag threshold of 0.1315, precision 0.168 and recall 0.4175. It uses 226 model columns; 139 are built from the 27 website answers and 87 are filled with typical values."
+}

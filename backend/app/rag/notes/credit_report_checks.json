@@ -1,0 +1,32 @@
+{
+  "id": "credit_report_checks",
+  "title": "Credit Report Checks",
+  "topic": "inputs",
+  "keywords_en": [
+    "credit report checks",
+    "credit bureau inquiries",
+    "inquiry",
+    "amt_req_credit_bureau_year",
+    "checks this year",
+    "bureau check"
+  ],
+  "keywords_hi": [
+    "credit report jaanch",
+    "bureau inquiry",
+    "puchtach",
+    "jaanch",
+    "\u0915\u094d\u0930\u0947\u0921\u093f\u091f \u0930\u093f\u092a\u094b\u0930\u094d\u091f \u091c\u093e\u0902\u091a",
+    "\u092a\u0942\u091b\u0924\u093e\u091b",
+    "\u092c\u094d\u092f\u0942\u0930\u094b \u091c\u093e\u0902\u091a"
+  ],
+  "keywords_mr": [
+    "credit report tapasani",
+    "bureau inquiry",
+    "chowkashi",
+    "tapasani",
+    "\u0915\u094d\u0930\u0947\u0921\u093f\u091f \u0930\u093f\u092a\u094b\u0930\u094d\u091f \u0924\u092a\u093e\u0938\u0923\u0940",
+    "\u091a\u094c\u0915\u0936\u0940",
+    "\u092c\u094d\u092f\u0941\u0930\u094b \u0924\u092a\u093e\u0938\u0923\u0940"
+  ],
+  "body": "Credit report checks count inquiries made by credit providers on your file over the past year. The model looks at this together with your other answers. Its effect can go either way depending on the values, and the result page shows which way each factor pushed your estimate."
+}

@@ -1,0 +1,53 @@
+{
+  "id": "income_and_loan",
+  "title": "Income, Loan Amount, and Annuity",
+  "topic": "inputs",
+  "keywords_en": [
+    "income",
+    "loan amount",
+    "annuity",
+    "repayment",
+    "salary",
+    "earnings",
+    "goods price",
+    "borrow",
+    "credit amount",
+    "annual income",
+    "annual repayment amount"
+  ],
+  "keywords_hi": [
+    "aamdani",
+    "aay",
+    "rin",
+    "loan",
+    "kist",
+    "kamai",
+    "vetan",
+    "paise",
+    "aamadani",
+    "\u0906\u092e\u0926\u0928\u0940",
+    "\u0906\u092f",
+    "\u090b\u0923",
+    "\u0932\u094b\u0928",
+    "\u0915\u093f\u0938\u094d\u0924",
+    "\u0915\u092e\u093e\u0908",
+    "\u0935\u0947\u0924\u0928",
+    "\u092a\u0948\u0938\u0947"
+  ],
+  "keywords_mr": [
+    "utpanna",
+    "karja",
+    "hafta",
+    "vetan",
+    "kamai",
+    "paise",
+    "utpann",
+    "\u0909\u0924\u094d\u092a\u0928\u094d\u0928",
+    "\u0915\u0930\u094d\u091c",
+    "\u0939\u092a\u094d\u0924\u093e",
+    "\u0935\u0947\u0924\u0928",
+    "\u0915\u092e\u093e\u0908",
+    "\u092a\u0948\u0938\u0947"
+  ],
+  "body": "Your annual income, requested loan amount, annual repayment annuity, and goods price describe the loan scale. The model compares loan amount and annual repayment against annual income. The model looks at this together with your other answers. Its effect can go either way depending on the values, and the result page shows which way each factor pushed your estimate."
+}

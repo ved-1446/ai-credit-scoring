@@ -1,0 +1,327 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root,
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+
+    /* Slate scale: Warm graphite (dark) */
+    --slate-950: 15 17 16;
+    --slate-900: 22 25 23; /* page background */
+    --slate-800: 31 35 32; /* cards */
+    --slate-700: 44 49 45; /* borders */
+    --slate-600: 63 69 64;
+    --slate-500: 107 114 108;
+    --slate-400: 150 157 150; /* muted text */
+    --slate-300: 189 194 186;
+    --slate-200: 215 219 211;
+    --slate-100: 233 235 228; /* main text */
+    --slate-50: 245 246 241;
+
+    /* Brand scale (dark teal) */
+    --brand-50: 235 248 245;
+    --brand-100: 204 240 234;
+    --brand-200: 163 226 216;
+    --brand-300: 124 211 198;
+    --brand-400: 94 196 180;
+    --brand-500: 45 170 152;
+    --brand-600: 20 128 116; /* button background */
+    --brand-700: 18 105 96;
+    --brand-800: 15 84 77;
+    --brand-900: 12 68 62;
+
+    /* Accent (terracotta) */
+    --accent: 224 138 102;
+
+    /* Risk band colors (dark) */
+    --risk-low: 74 222 128;       /* emerald-400 */
+    --risk-medium: 250 204 21;    /* yellow-400 */
+    --risk-high: 251 146 60;      /* orange-400 */
+    --risk-very-high: 248 113 113;/* red-400 */
+
+    /* Risk band chart fill colors (dark) */
+    --risk-low-fill: 74 197 142;
+    --risk-medium-fill: 230 190 70;
+    --risk-high-fill: 240 140 70;
+    --risk-very-high-fill: 235 90 100;
+
+    /* Chart directional tokens (dark) */
+    --chart-up: 232 118 100;
+    --chart-down: 70 182 160;
+    --chart-neutral: 140 146 140;
+
+    /* Adaptive hue variables (DARK: Tailwind 200, 300, 400 default values) */
+    --yellow-200: 254 240 138;
+    --yellow-300: 253 224 71;
+    --yellow-400: 250 204 21;
+
+    --amber-200: 253 230 138;
+    --amber-300: 252 211 77;
+    --amber-400: 251 191 36;
+
+    --orange-200: 254 215 170;
+    --orange-300: 253 186 116;
+    --orange-400: 251 146 60;
+
+    --red-200: 254 202 202;
+    --red-300: 252 165 165;
+    --red-400: 248 113 113;
+
+    --rose-200: 254 205 211;
+    --rose-300: 253 164 175;
+    --rose-400: 251 113 133;
+
+    --emerald-200: 167 243 208;
+    --emerald-300: 110 231 183;
+    --emerald-400: 52 211 153;
+
+    --green-200: 187 247 208;
+    --green-300: 134 239 172;
+    --green-400: 74 222 128;
+
+    --teal-200: 153 246 228;
+    --teal-300: 94 234 212;
+    --teal-400: 45 212 191;
+
+    --sky-200: 186 230 253;
+    --sky-300: 125 211 252;
+    --sky-400: 56 189 248;
+
+    --blue-200: 191 219 254;
+    --blue-300: 147 197 253;
+    --blue-400: 96 165 250;
+
+    --indigo-200: 199 210 254;
+    --indigo-300: 165 180 252;
+    --indigo-400: 129 140 248;
+
+    --violet-200: 221 214 254;
+    --violet-300: 196 181 253;
+    --violet-400: 167 139 250;
+
+    --purple-200: 233 213 255;
+    --purple-300: 216 180 254;
+    --purple-400: 192 132 252;
+  }
+
+  :root[data-theme="light"] {
+    color-scheme: light;
+
+    /* Slate scale: Warm paper (inverted for light) */
+    --slate-950: 236 231 219;
+    --slate-900: 245 241 232; /* page background */
+    --slate-800: 251 249 244; /* cards */
+    --slate-700: 222 216 203; /* borders */
+    --slate-600: 200 193 178;
+    --slate-500: 140 134 120;
+    --slate-400: 107 101 88; /* muted text */
+    --slate-300: 80 75 64;
+    --slate-200: 52 48 40;
+    --slate-100: 31 29 24; /* main text */
+    --slate-50: 18 17 14;
+
+    /* Brand scale (light teal) */
+    --brand-50: 18 17 14;
+    --brand-100: 31 29 24;
+    --brand-200: 52 48 40;
+    --brand-300: 13 85 78;
+    --brand-400: 15 118 110;
+    --brand-500: 15 128 116;
+    --brand-600: 13 110 100; /* button background */
+    --brand-700: 163 226 216;
+    --brand-800: 204 240 234;
+    --brand-900: 235 248 245;
+
+    /* Accent (terracotta light) */
+    --accent: 178 84 48;
+
+    /* Risk band colors (light) */
+    --risk-low: 22 101 52;        /* emerald-800 */
+    --risk-medium: 133 77 14;     /* yellow-800 */
+    --risk-high: 154 52 18;       /* orange-800 */
+    --risk-very-high: 153 27 27;  /* red-800 */
+
+    /* Risk band chart fill colors (light) */
+    --risk-low-fill: 34 150 100;
+    --risk-medium-fill: 214 158 46;
+    --risk-high-fill: 224 112 48;
+    --risk-very-high-fill: 200 56 70;
+
+    /* Chart directional tokens (light) */
+    --chart-up: 184 64 44;
+    --chart-down: 18 120 106;
+    --chart-neutral: 120 114 100;
+
+    /* Adaptive hue variables (LIGHT: 200->900, 300->800, 400->700 for high paper contrast) */
+    --yellow-200: 113 63 18;     /* yellow-900 */
+    --yellow-300: 133 77 14;     /* yellow-800 */
+    --yellow-400: 161 98 7;      /* yellow-700 */
+
+    --amber-200: 120 53 15;      /* amber-900 */
+    --amber-300: 146 64 14;      /* amber-800 */
+    --amber-400: 180 83 9;       /* amber-700 */
+
+    --orange-200: 124 45 18;     /* orange-900 */
+    --orange-300: 154 52 18;     /* orange-800 */
+    --orange-400: 194 65 12;     /* orange-700 */
+
+    --red-200: 127 29 29;        /* red-900 */
+    --red-300: 153 27 27;        /* red-800 */
+    --red-400: 185 28 28;        /* red-700 */
+
+    --rose-200: 136 19 55;       /* rose-900 */
+    --rose-300: 159 18 57;       /* rose-800 */
+    --rose-400: 190 18 60;       /* rose-700 */
+
+    --emerald-200: 6 78 59;      /* emerald-900 */
+    --emerald-300: 6 95 70;      /* emerald-800 */
+    --emerald-400: 4 120 87;     /* emerald-700 */
+
+    --green-200: 20 83 45;       /* green-900 */
+    --green-300: 22 101 52;      /* green-800 */
+    --green-400: 21 128 61;      /* green-700 */
+
+    --teal-200: 19 78 74;        /* teal-900 */
+    --teal-300: 17 94 89;        /* teal-800 */
+    --teal-400: 15 118 110;      /* teal-700 */
+
+    --sky-200: 12 74 110;        /* sky-900 */
+    --sky-300: 7 89 133;         /* sky-800 */
+    --sky-400: 3 105 161;        /* sky-700 */
+
+    --blue-200: 30 58 138;       /* blue-900 */
+    --blue-300: 30 64 175;       /* blue-800 */
+    --blue-400: 29 78 216;       /* blue-700 */
+
+    --indigo-200: 49 46 129;     /* indigo-900 */
+    --indigo-300: 55 48 163;     /* indigo-800 */
+    --indigo-400: 67 56 202;     /* indigo-700 */
+
+    --violet-200: 76 29 149;     /* violet-900 */
+    --violet-300: 91 33 182;     /* violet-800 */
+    --violet-400: 109 40 217;    /* violet-700 */
+
+    --purple-200: 88 28 135;     /* purple-900 */
+    --purple-300: 107 33 168;    /* purple-800 */
+    --purple-400: 126 34 206;    /* purple-700 */
+  }
+
+  body {
+    @apply bg-slate-900 text-slate-100 font-sans antialiased min-h-screen;
+  }
+
+  ::selection {
+    background-color: rgb(var(--brand-500));
+    color: #ffffff;
+  }
+
+  h1, h2 {
+    @apply font-display tracking-tight;
+  }
+
+  h3, h4, h5, h6 {
+    @apply font-sans font-semibold;
+  }
+
+  table, td, th {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Keyboard focus only: 2px crisp accent outline, no click glow ring */
+  *:focus {
+    outline: none;
+  }
+
+  *:focus-visible {
+    outline: 2px solid rgb(var(--accent));
+    outline-offset: 2px;
+  }
+
+  /* Chrome autofill input theme matching */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus,
+  select:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px rgb(var(--slate-800)) inset !important;
+    box-shadow: 0 0 0 1000px rgb(var(--slate-800)) inset !important;
+    -webkit-text-fill-color: rgb(var(--slate-100)) !important;
+    caret-color: rgb(var(--slate-100)) !important;
+    transition: background-color 50000s ease-in-out 0s !important;
+  }
+}
+
+/* Central override so heading elements with text-white use the theme-adaptive slate-50 token */
+h1.text-white,
+h2.text-white,
+h3.text-white,
+h4.text-white,
+h5.text-white,
+h6.text-white {
+  color: rgb(var(--slate-50)) !important;
+}
+
+/* Neutralize AI glow shadow utilities */
+[class*="shadow-brand-"],
+[class*="shadow-indigo-"],
+[class*="shadow-rose-"],
+[class*="shadow-emerald-"],
+[class*="shadow-amber-"] {
+  --tw-shadow-color: rgb(0 0 0 / 0.08) !important;
+  --tw-shadow: 0 4px 12px -2px var(--tw-shadow-color), 0 2px 6px -2px var(--tw-shadow-color) !important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+}
+
+/* Remove frosted-glass backdrop blur artifacts centrally */
+.backdrop-blur-md,
+.backdrop-blur-lg,
+.backdrop-blur-xl,
+.backdrop-blur-2xl,
+[class*="backdrop-blur"] {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(var(--slate-900));
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--slate-700));
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--slate-600));
+}
+
+/* Page Transition animation (fade + 4px rise over 160ms) */
+.page-transition-enter {
+  animation: pageFadeRise 160ms ease-out forwards;
+}
+
+@keyframes pageFadeRise {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-transition-enter {
+    animation: none !important;
+  }
+}
+

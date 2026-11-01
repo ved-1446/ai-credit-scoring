@@ -1,0 +1,33 @@
+{
+  "id": "result_page_and_whatif",
+  "title": "Result Page and What-If Simulation",
+  "topic": "features",
+  "keywords_en": [
+    "result page",
+    "what if",
+    "simulation",
+    "adjust inputs",
+    "explore",
+    "change values",
+    "interactive"
+  ],
+  "keywords_hi": [
+    "parinaam page",
+    "what if simulation",
+    "badalkar dekhna",
+    "simulation",
+    "\u092a\u0930\u093f\u0923\u093e\u092e \u092a\u0947\u091c",
+    "\u092c\u0926\u0932\u0915\u0930 \u0926\u0947\u0916\u0928\u093e",
+    "\u0938\u093f\u092e\u094d\u092f\u0941\u0932\u0947\u0936\u0928"
+  ],
+  "keywords_mr": [
+    "nikal page",
+    "what if simulation",
+    "badlun baghane",
+    "simulation",
+    "\u0928\u093f\u0915\u093e\u0932 \u092a\u0947\u091c",
+    "\u092c\u0926\u0932\u0942\u0928 \u092c\u0918\u0923\u0947",
+    "\u0938\u093f\u092e\u094d\u092f\u0941\u0932\u0947\u0936\u0928"
+  ],
+  "body": "The result page displays your estimated risk level, risk score percentage, and top contributing application factors. The interactive what-if simulation allows you to test hypothetical changes, such as requesting a different loan amount, to see how adjustments alter the model estimate."
+}

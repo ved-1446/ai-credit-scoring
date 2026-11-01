@@ -1,0 +1,41 @@
+{
+  "id": "reasons_raised_lowered",
+  "title": "Why Factors Raised or Lowered the Estimate",
+  "topic": "results",
+  "keywords_en": [
+    "raised",
+    "lowered",
+    "reasons",
+    "main factors",
+    "why did reason lower",
+    "why did reason raise",
+    "direction"
+  ],
+  "keywords_hi": [
+    "badha diya",
+    "ghata diya",
+    "karan",
+    "factors",
+    "kyun badha",
+    "kyun kam hua",
+    "\u092c\u0922\u093c\u093e \u0926\u093f\u092f\u093e",
+    "\u0918\u091f\u093e \u0926\u093f\u092f\u093e",
+    "\u0915\u093e\u0930\u0923",
+    "\u0915\u094d\u092f\u0942\u0902 \u092c\u0922\u093c\u093e",
+    "\u0915\u094d\u092f\u0942\u0902 \u0915\u092e \u0939\u0941\u0906"
+  ],
+  "keywords_mr": [
+    "vadhle",
+    "kami zale",
+    "karane",
+    "factors",
+    "kashamule vadha",
+    "kashamule kami",
+    "\u0935\u093e\u0922\u0932\u0947",
+    "\u0915\u092e\u0940 \u091d\u093e\u0932\u0947",
+    "\u0915\u093e\u0930\u0923\u0947",
+    "\u0915\u0936\u093e\u092e\u0941\u0932\u0947 \u0935\u093e\u0922\u0932\u0947",
+    "\u0915\u0936\u093e\u092e\u0941\u0932\u0947 \u0915\u092e\u0940"
+  ],
+  "body": "Each factor evaluated by the model pushes the risk estimate higher or lower compared to a baseline applicant. The result page shows which way each factor pushed your own estimate. For example, in this demo model higher external credit scores generally push the estimate down."
+}

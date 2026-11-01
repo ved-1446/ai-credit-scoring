@@ -1,0 +1,33 @@
+{
+  "id": "scoring_mechanics",
+  "title": "How Scoring Works",
+  "topic": "model",
+  "keywords_en": [
+    "how scoring works",
+    "how it works",
+    "scoring model",
+    "226 columns",
+    "27 questions",
+    "algorithm",
+    "prediction calculation"
+  ],
+  "keywords_hi": [
+    "scoring kaise kaam karta hai",
+    "model kaise kaam karta hai",
+    "kaisa score nikalta hai",
+    "prakriya",
+    "\u0938\u094d\u0915\u094b\u0930\u093f\u0902\u0917 \u0915\u0948\u0938\u0947 \u0915\u093e\u092e \u0915\u0930\u0924\u093e \u0939\u0948",
+    "\u092e\u0949\u0921\u0932 \u0915\u0948\u0938\u0947 \u0915\u093e\u092e \u0915\u0930\u0924\u093e \u0939\u0948",
+    "\u092a\u094d\u0930\u0915\u094d\u0930\u093f\u092f\u093e"
+  ],
+  "keywords_mr": [
+    "scoring kase kam karte",
+    "model kase kam karte",
+    "gunank kase kadhle",
+    "prakriya",
+    "\u0938\u094d\u0915\u094b\u0930\u093f\u0902\u0917 \u0915\u0938\u0947 \u0915\u093e\u092e \u0915\u0930\u0924\u0947",
+    "\u092e\u0949\u0921\u0947\u0932 \u0915\u0938\u0947 \u0915\u093e\u092e \u0915\u0930\u0924\u0947",
+    "\u092a\u094d\u0930\u0915\u094d\u0930\u093f\u092f\u093e"
+  ],
+  "body": "When you submit the 27 application questions, the website maps your 27 answers into the model's 226 input columns and fills the remaining columns with typical values. The machine learning model computes an overall risk estimate across all 226 columns, producing a probability score and risk level."
+}

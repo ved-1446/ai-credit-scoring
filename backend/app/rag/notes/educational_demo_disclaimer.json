@@ -1,0 +1,38 @@
+{
+  "id": "educational_demo_disclaimer",
+  "title": "Educational Demonstration and Disclaimers",
+  "topic": "disclaimers",
+  "keywords_en": [
+    "educational demo",
+    "not real credit decision",
+    "is this a real loan decision",
+    "disclaimer",
+    "financial advice",
+    "real lender",
+    "official decision",
+    "real loan"
+  ],
+  "keywords_hi": [
+    "shaikshik demo",
+    "kya yeh asli loan decision hai",
+    "asli faisla",
+    "salah",
+    "disclaimer",
+    "\u0936\u0948\u0915\u094d\u0937\u093f\u0915 \u0921\u0947\u092e\u094b",
+    "\u0915\u094d\u092f\u093e \u092f\u0939 \u0905\u0938\u0932\u0940 \u0932\u094b\u0928 \u092b\u0948\u0938\u0932\u093e \u0939\u0948",
+    "\u0905\u0938\u0932\u0940 \u0928\u093f\u0930\u094d\u0923\u092f",
+    "\u0938\u0932\u093e\u0939"
+  ],
+  "keywords_mr": [
+    "shaikshanik demo",
+    "ha khara karja nirnay ahe ka",
+    "khara nirnay",
+    "salla",
+    "disclaimer",
+    "\u0936\u0948\u0915\u094d\u0937\u0923\u093f\u0915 \u0921\u0947\u092e\u094b",
+    "\u0939\u093e \u0916\u0930\u093e \u0915\u0930\u094d\u091c \u0928\u093f\u0930\u094d\u0923\u092f \u0906\u0939\u0947 \u0915\u093e",
+    "\u0916\u0930\u093e \u0928\u093f\u0930\u094d\u0923\u092f",
+    "\u0938\u0932\u094d\u0932\u093e"
+  ],
+  "body": "Data Dynamo is an educational demonstration designed to show how credit scoring models work. It does not make real credit decisions, loan approvals, or provide financial, legal, or investment advice. No real borrowing or lending occurs through this demo."
+}

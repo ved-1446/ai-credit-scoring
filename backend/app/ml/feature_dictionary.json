@@ -1,0 +1,2626 @@
+{
+  "CNT_CHILDREN": {
+    "plain_name": "Number of children",
+    "subject": "The number of children in your household",
+    "meaning": "The number of children in the applicant household.",
+    "user_entered": "yes",
+    "group": "application",
+    "summary_name": "number of children"
+  },
+  "AMT_INCOME_TOTAL": {
+    "plain_name": "Annual income",
+    "subject": "Your annual income",
+    "meaning": "Total annual gross income reported by the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "summary_name": "annual income"
+  },
+  "AMT_CREDIT": {
+    "plain_name": "Loan amount",
+    "subject": "Your loan amount",
+    "meaning": "The total principal credit amount requested for the loan.",
+    "user_entered": "yes",
+    "group": "application",
+    "summary_name": "loan amount"
+  },
+  "AMT_ANNUITY": {
+    "plain_name": "Annual repayment",
+    "subject": "Your annual repayment amount",
+    "meaning": "The scheduled annual repayment annuity amount for the loan.",
+    "user_entered": "yes",
+    "group": "application",
+    "summary_name": "annual repayment amount"
+  },
+  "AMT_GOODS_PRICE": {
+    "plain_name": "Goods price",
+    "subject": "The price of the goods or property you are financing",
+    "meaning": "The price of the goods or property for which the credit is given.",
+    "user_entered": "yes",
+    "group": "application",
+    "summary_name": "price of goods being financed"
+  },
+  "REGION_POPULATION_RELATIVE": {
+    "plain_name": "Region population relative",
+    "subject": "Region population relative",
+    "meaning": "Internal demographic or background indicator (region population relative).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "DAYS_BIRTH": {
+    "plain_name": "Days of birth",
+    "subject": "Your age in days",
+    "meaning": "Age of the applicant expressed in negative days.",
+    "user_entered": "derived",
+    "group": "hidden"
+  },
+  "DAYS_EMPLOYED": {
+    "plain_name": "Days employed",
+    "subject": "Your employment duration in days",
+    "meaning": "Duration of current employment expressed in negative days.",
+    "user_entered": "derived",
+    "group": "hidden"
+  },
+  "DAYS_REGISTRATION": {
+    "plain_name": "Days registration",
+    "subject": "Days registration",
+    "meaning": "Internal demographic or background indicator (days registration).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "DAYS_ID_PUBLISH": {
+    "plain_name": "Days id publish",
+    "subject": "Days id publish",
+    "meaning": "Internal demographic or background indicator (days id publish).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "FLAG_MOBIL": {
+    "plain_name": "Flag mobil",
+    "subject": "Flag mobil",
+    "meaning": "Internal demographic or background indicator (flag mobil).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "FLAG_EMP_PHONE": {
+    "plain_name": "Flag emp phone",
+    "subject": "Flag emp phone",
+    "meaning": "Internal demographic or background indicator (flag emp phone).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "FLAG_WORK_PHONE": {
+    "plain_name": "Flag work phone",
+    "subject": "Flag work phone",
+    "meaning": "Internal demographic or background indicator (flag work phone).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "FLAG_CONT_MOBILE": {
+    "plain_name": "Flag cont mobile",
+    "subject": "Flag cont mobile",
+    "meaning": "Internal demographic or background indicator (flag cont mobile).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "FLAG_PHONE": {
+    "plain_name": "Flag phone",
+    "subject": "Flag phone",
+    "meaning": "Internal demographic or background indicator (flag phone).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "FLAG_EMAIL": {
+    "plain_name": "Flag email",
+    "subject": "Flag email",
+    "meaning": "Internal demographic or background indicator (flag email).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "CNT_FAM_MEMBERS": {
+    "plain_name": "Family members",
+    "subject": "The number of family members in your household",
+    "meaning": "The total number of family members living in the applicant household.",
+    "user_entered": "yes",
+    "group": "application",
+    "summary_name": "family size"
+  },
+  "REGION_RATING_CLIENT": {
+    "plain_name": "Region rating",
+    "subject": "The region rating for where you live",
+    "meaning": "Our internal rating of the region where the client lives.",
+    "user_entered": "yes",
+    "group": "application",
+    "summary_name": "region rating"
+  },
+  "REGION_RATING_CLIENT_W_CITY": {
+    "plain_name": "Region rating client w city",
+    "subject": "Region rating client w city",
+    "meaning": "Internal demographic or background indicator (region rating client w city).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "HOUR_APPR_PROCESS_START": {
+    "plain_name": "Application hour",
+    "subject": "The hour of the day when you applied",
+    "meaning": "The hour of the day when the loan application was submitted.",
+    "user_entered": "yes",
+    "group": "admin_only"
+  },
+  "REG_REGION_NOT_LIVE_REGION": {
+    "plain_name": "Reg region not live region",
+    "subject": "Reg region not live region",
+    "meaning": "Internal demographic or background indicator (reg region not live region).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "REG_REGION_NOT_WORK_REGION": {
+    "plain_name": "Reg region not work region",
+    "subject": "Reg region not work region",
+    "meaning": "Internal demographic or background indicator (reg region not work region).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "LIVE_REGION_NOT_WORK_REGION": {
+    "plain_name": "Live region not work region",
+    "subject": "Live region not work region",
+    "meaning": "Internal demographic or background indicator (live region not work region).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "REG_CITY_NOT_LIVE_CITY": {
+    "plain_name": "Reg city not live city",
+    "subject": "Reg city not live city",
+    "meaning": "Internal demographic or background indicator (reg city not live city).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "REG_CITY_NOT_WORK_CITY": {
+    "plain_name": "Reg city not work city",
+    "subject": "Reg city not work city",
+    "meaning": "Internal demographic or background indicator (reg city not work city).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "LIVE_CITY_NOT_WORK_CITY": {
+    "plain_name": "Live city not work city",
+    "subject": "Live city not work city",
+    "meaning": "Internal demographic or background indicator (live city not work city).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "EXT_SOURCE_1": {
+    "plain_name": "External credit score 1",
+    "subject": "Your external credit score 1",
+    "meaning": "Normalized credit score from external data source 1.",
+    "user_entered": "yes",
+    "group": "application",
+    "summary_name": "external credit score 1"
+  },
+  "EXT_SOURCE_2": {
+    "plain_name": "External credit score 2",
+    "subject": "Your external credit score 2",
+    "meaning": "Normalized credit score from external data source 2.",
+    "user_entered": "yes",
+    "group": "application",
+    "summary_name": "external credit score 2"
+  },
+  "EXT_SOURCE_3": {
+    "plain_name": "External credit score 3",
+    "subject": "Your external credit score 3",
+    "meaning": "Normalized credit score from external data source 3.",
+    "user_entered": "yes",
+    "group": "application",
+    "summary_name": "external credit score 3"
+  },
+  "APARTMENTS_AVG": {
+    "plain_name": "Apartments avg",
+    "subject": "Apartments avg",
+    "meaning": "Internal demographic or background indicator (apartments avg).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "BASEMENTAREA_AVG": {
+    "plain_name": "Basementarea avg",
+    "subject": "Basementarea avg",
+    "meaning": "Internal demographic or background indicator (basementarea avg).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "YEARS_BEGINEXPLUATATION_AVG": {
+    "plain_name": "Years beginexpluatation avg",
+    "subject": "Years beginexpluatation avg",
+    "meaning": "Internal demographic or background indicator (years beginexpluatation avg).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "ELEVATORS_AVG": {
+    "plain_name": "Elevators avg",
+    "subject": "Elevators avg",
+    "meaning": "Internal demographic or background indicator (elevators avg).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "ENTRANCES_AVG": {
+    "plain_name": "Entrances avg",
+    "subject": "Entrances avg",
+    "meaning": "Internal demographic or background indicator (entrances avg).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "FLOORSMAX_AVG": {
+    "plain_name": "Floorsmax avg",
+    "subject": "Floorsmax avg",
+    "meaning": "Internal demographic or background indicator (floorsmax avg).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "LANDAREA_AVG": {
+    "plain_name": "Landarea avg",
+    "subject": "Landarea avg",
+    "meaning": "Internal demographic or background indicator (landarea avg).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "LIVINGAREA_AVG": {
+    "plain_name": "Livingarea avg",
+    "subject": "Livingarea avg",
+    "meaning": "Internal demographic or background indicator (livingarea avg).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "NONLIVINGAREA_AVG": {
+    "plain_name": "Nonlivingarea avg",
+    "subject": "Nonlivingarea avg",
+    "meaning": "Internal demographic or background indicator (nonlivingarea avg).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "APARTMENTS_MODE": {
+    "plain_name": "Apartments mode",
+    "subject": "Apartments mode",
+    "meaning": "Internal demographic or background indicator (apartments mode).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "BASEMENTAREA_MODE": {
+    "plain_name": "Basementarea mode",
+    "subject": "Basementarea mode",
+    "meaning": "Internal demographic or background indicator (basementarea mode).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "YEARS_BEGINEXPLUATATION_MODE": {
+    "plain_name": "Years beginexpluatation mode",
+    "subject": "Years beginexpluatation mode",
+    "meaning": "Internal demographic or background indicator (years beginexpluatation mode).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "ELEVATORS_MODE": {
+    "plain_name": "Elevators mode",
+    "subject": "Elevators mode",
+    "meaning": "Internal demographic or background indicator (elevators mode).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "ENTRANCES_MODE": {
+    "plain_name": "Entrances mode",
+    "subject": "Entrances mode",
+    "meaning": "Internal demographic or background indicator (entrances mode).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "FLOORSMAX_MODE": {
+    "plain_name": "Floorsmax mode",
+    "subject": "Floorsmax mode",
+    "meaning": "Internal demographic or background indicator (floorsmax mode).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "LANDAREA_MODE": {
+    "plain_name": "Landarea mode",
+    "subject": "Landarea mode",
+    "meaning": "Internal demographic or background indicator (landarea mode).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "LIVINGAREA_MODE": {
+    "plain_name": "Livingarea mode",
+    "subject": "Livingarea mode",
+    "meaning": "Internal demographic or background indicator (livingarea mode).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "NONLIVINGAREA_MODE": {
+    "plain_name": "Nonlivingarea mode",
+    "subject": "Nonlivingarea mode",
+    "meaning": "Internal demographic or background indicator (nonlivingarea mode).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "APARTMENTS_MEDI": {
+    "plain_name": "Apartments medi",
+    "subject": "Apartments medi",
+    "meaning": "Internal demographic or background indicator (apartments medi).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "BASEMENTAREA_MEDI": {
+    "plain_name": "Basementarea medi",
+    "subject": "Basementarea medi",
+    "meaning": "Internal demographic or background indicator (basementarea medi).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "YEARS_BEGINEXPLUATATION_MEDI": {
+    "plain_name": "Years beginexpluatation medi",
+    "subject": "Years beginexpluatation medi",
+    "meaning": "Internal demographic or background indicator (years beginexpluatation medi).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "ELEVATORS_MEDI": {
+    "plain_name": "Elevators medi",
+    "subject": "Elevators medi",
+    "meaning": "Internal demographic or background indicator (elevators medi).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "ENTRANCES_MEDI": {
+    "plain_name": "Entrances medi",
+    "subject": "Entrances medi",
+    "meaning": "Internal demographic or background indicator (entrances medi).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "FLOORSMAX_MEDI": {
+    "plain_name": "Floorsmax medi",
+    "subject": "Floorsmax medi",
+    "meaning": "Internal demographic or background indicator (floorsmax medi).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "LANDAREA_MEDI": {
+    "plain_name": "Landarea medi",
+    "subject": "Landarea medi",
+    "meaning": "Internal demographic or background indicator (landarea medi).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "LIVINGAREA_MEDI": {
+    "plain_name": "Livingarea medi",
+    "subject": "Livingarea medi",
+    "meaning": "Internal demographic or background indicator (livingarea medi).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "NONLIVINGAREA_MEDI": {
+    "plain_name": "Nonlivingarea medi",
+    "subject": "Nonlivingarea medi",
+    "meaning": "Internal demographic or background indicator (nonlivingarea medi).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "TOTALAREA_MODE": {
+    "plain_name": "Totalarea mode",
+    "subject": "Totalarea mode",
+    "meaning": "Internal demographic or background indicator (totalarea mode).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "OBS_30_CNT_SOCIAL_CIRCLE": {
+    "plain_name": "Obs 30 cnt social circle",
+    "subject": "Obs 30 cnt social circle",
+    "meaning": "Internal demographic or background indicator (obs 30 cnt social circle).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "DEF_30_CNT_SOCIAL_CIRCLE": {
+    "plain_name": "Def 30 cnt social circle",
+    "subject": "Def 30 cnt social circle",
+    "meaning": "Internal demographic or background indicator (def 30 cnt social circle).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "OBS_60_CNT_SOCIAL_CIRCLE": {
+    "plain_name": "Obs 60 cnt social circle",
+    "subject": "Obs 60 cnt social circle",
+    "meaning": "Internal demographic or background indicator (obs 60 cnt social circle).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "DEF_60_CNT_SOCIAL_CIRCLE": {
+    "plain_name": "Def 60 cnt social circle",
+    "subject": "Def 60 cnt social circle",
+    "meaning": "Internal demographic or background indicator (def 60 cnt social circle).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "DAYS_LAST_PHONE_CHANGE": {
+    "plain_name": "Days last phone change",
+    "subject": "Days last phone change",
+    "meaning": "Internal demographic or background indicator (days last phone change).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "FLAG_DOCUMENT_2": {
+    "plain_name": "Flag document 2",
+    "subject": "Flag document 2",
+    "meaning": "Internal demographic or background indicator (flag document 2).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "FLAG_DOCUMENT_3": {
+    "plain_name": "Flag document 3",
+    "subject": "Flag document 3",
+    "meaning": "Internal demographic or background indicator (flag document 3).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "FLAG_DOCUMENT_4": {
+    "plain_name": "Flag document 4",
+    "subject": "Flag document 4",
+    "meaning": "Internal demographic or background indicator (flag document 4).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "FLAG_DOCUMENT_5": {
+    "plain_name": "Flag document 5",
+    "subject": "Flag document 5",
+    "meaning": "Internal demographic or background indicator (flag document 5).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "FLAG_DOCUMENT_6": {
+    "plain_name": "Flag document 6",
+    "subject": "Flag document 6",
+    "meaning": "Internal demographic or background indicator (flag document 6).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "FLAG_DOCUMENT_7": {
+    "plain_name": "Flag document 7",
+    "subject": "Flag document 7",
+    "meaning": "Internal demographic or background indicator (flag document 7).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "FLAG_DOCUMENT_8": {
+    "plain_name": "Flag document 8",
+    "subject": "Flag document 8",
+    "meaning": "Internal demographic or background indicator (flag document 8).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "FLAG_DOCUMENT_9": {
+    "plain_name": "Flag document 9",
+    "subject": "Flag document 9",
+    "meaning": "Internal demographic or background indicator (flag document 9).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "FLAG_DOCUMENT_10": {
+    "plain_name": "Flag document 10",
+    "subject": "Flag document 10",
+    "meaning": "Internal demographic or background indicator (flag document 10).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "FLAG_DOCUMENT_11": {
+    "plain_name": "Flag document 11",
+    "subject": "Flag document 11",
+    "meaning": "Internal demographic or background indicator (flag document 11).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "FLAG_DOCUMENT_12": {
+    "plain_name": "Flag document 12",
+    "subject": "Flag document 12",
+    "meaning": "Internal demographic or background indicator (flag document 12).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "FLAG_DOCUMENT_13": {
+    "plain_name": "Flag document 13",
+    "subject": "Flag document 13",
+    "meaning": "Internal demographic or background indicator (flag document 13).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "FLAG_DOCUMENT_14": {
+    "plain_name": "Flag document 14",
+    "subject": "Flag document 14",
+    "meaning": "Internal demographic or background indicator (flag document 14).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "FLAG_DOCUMENT_15": {
+    "plain_name": "Flag document 15",
+    "subject": "Flag document 15",
+    "meaning": "Internal demographic or background indicator (flag document 15).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "FLAG_DOCUMENT_16": {
+    "plain_name": "Flag document 16",
+    "subject": "Flag document 16",
+    "meaning": "Internal demographic or background indicator (flag document 16).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "FLAG_DOCUMENT_17": {
+    "plain_name": "Flag document 17",
+    "subject": "Flag document 17",
+    "meaning": "Internal demographic or background indicator (flag document 17).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "FLAG_DOCUMENT_18": {
+    "plain_name": "Flag document 18",
+    "subject": "Flag document 18",
+    "meaning": "Internal demographic or background indicator (flag document 18).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "FLAG_DOCUMENT_19": {
+    "plain_name": "Flag document 19",
+    "subject": "Flag document 19",
+    "meaning": "Internal demographic or background indicator (flag document 19).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "FLAG_DOCUMENT_20": {
+    "plain_name": "Flag document 20",
+    "subject": "Flag document 20",
+    "meaning": "Internal demographic or background indicator (flag document 20).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "FLAG_DOCUMENT_21": {
+    "plain_name": "Flag document 21",
+    "subject": "Flag document 21",
+    "meaning": "Internal demographic or background indicator (flag document 21).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "AMT_REQ_CREDIT_BUREAU_HOUR": {
+    "plain_name": "Amt req credit bureau hour",
+    "subject": "Amt req credit bureau hour",
+    "meaning": "Internal demographic or background indicator (amt req credit bureau hour).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "AMT_REQ_CREDIT_BUREAU_DAY": {
+    "plain_name": "Amt req credit bureau day",
+    "subject": "Amt req credit bureau day",
+    "meaning": "Internal demographic or background indicator (amt req credit bureau day).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "AMT_REQ_CREDIT_BUREAU_WEEK": {
+    "plain_name": "Amt req credit bureau week",
+    "subject": "Amt req credit bureau week",
+    "meaning": "Internal demographic or background indicator (amt req credit bureau week).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "AMT_REQ_CREDIT_BUREAU_MON": {
+    "plain_name": "Amt req credit bureau mon",
+    "subject": "Amt req credit bureau mon",
+    "meaning": "Internal demographic or background indicator (amt req credit bureau mon).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "AMT_REQ_CREDIT_BUREAU_QRT": {
+    "plain_name": "Amt req credit bureau qrt",
+    "subject": "Amt req credit bureau qrt",
+    "meaning": "Internal demographic or background indicator (amt req credit bureau qrt).",
+    "user_entered": "no",
+    "group": "hidden"
+  },
+  "AMT_REQ_CREDIT_BUREAU_YEAR": {
+    "plain_name": "Credit bureau inquiries (year)",
+    "subject": "The number of times your credit report was checked this year",
+    "meaning": "Number of credit bureau inquiries regarding the applicant in the past year.",
+    "user_entered": "yes",
+    "group": "application",
+    "summary_name": "number of times your credit report was checked this year"
+  },
+  "AGE_YEARS": {
+    "plain_name": "Age (years)",
+    "subject": "Your age",
+    "meaning": "Age of the applicant in years at the time of application.",
+    "user_entered": "yes",
+    "group": "other_inputs"
+  },
+  "YEARS_EMPLOYED": {
+    "plain_name": "Years employed",
+    "subject": "Your years of employment",
+    "meaning": "The number of years the applicant has been employed at their current job.",
+    "user_entered": "yes",
+    "group": "application",
+    "summary_name": "years of employment"
+  },
+  "IS_EMPLOYED": {
+    "plain_name": "Employment flag",
+    "subject": "Your employment status flag",
+    "meaning": "Flag indicating whether the applicant is currently employed.",
+    "user_entered": "derived",
+    "group": "hidden"
+  },
+  "HAS_APARTMENT_INFO": {
+    "plain_name": "Apartment information flag",
+    "subject": "Whether apartment information was provided",
+    "meaning": "Flag indicating whether detailed apartment measurements were provided.",
+    "user_entered": "derived",
+    "group": "hidden"
+  },
+  "NAME_CONTRACT_TYPE_Cash loans": {
+    "plain_name": "Contract type",
+    "subject": "Your contract type (Cash loans)",
+    "meaning": "Whether the loan is a standard cash loan or a revolving credit line.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "NAME_CONTRACT_TYPE",
+    "category": "Cash loans",
+    "one_hot": {
+      "value_1": "Your contract type (Cash loans)",
+      "value_0": "Not being in the 'Cash loans' contract type group",
+      "fallback_0": "Not being in the 'Cash loans' group"
+    },
+    "summary_name": "contract type"
+  },
+  "NAME_CONTRACT_TYPE_Revolving loans": {
+    "plain_name": "Contract type",
+    "subject": "Your contract type (Revolving loans)",
+    "meaning": "Whether the loan is a standard cash loan or a revolving credit line.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "NAME_CONTRACT_TYPE",
+    "category": "Revolving loans",
+    "one_hot": {
+      "value_1": "Your contract type (Revolving loans)",
+      "value_0": "Not being in the 'Revolving loans' contract type group",
+      "fallback_0": "Not being in the 'Revolving loans' group"
+    },
+    "summary_name": "contract type"
+  },
+  "CODE_GENDER_F": {
+    "plain_name": "Gender",
+    "subject": "Your gender (F)",
+    "meaning": "The applicant gender as provided in the demographic application section.",
+    "user_entered": "yes",
+    "group": "other_inputs",
+    "prefix": "CODE_GENDER",
+    "category": "F",
+    "one_hot": {
+      "value_1": "Your gender (F)",
+      "value_0": "Not being in the 'F' gender group",
+      "fallback_0": "Not being in the 'F' group"
+    }
+  },
+  "CODE_GENDER_M": {
+    "plain_name": "Gender",
+    "subject": "Your gender (M)",
+    "meaning": "The applicant gender as provided in the demographic application section.",
+    "user_entered": "yes",
+    "group": "other_inputs",
+    "prefix": "CODE_GENDER",
+    "category": "M",
+    "one_hot": {
+      "value_1": "Your gender (M)",
+      "value_0": "Not being in the 'M' gender group",
+      "fallback_0": "Not being in the 'M' group"
+    }
+  },
+  "FLAG_OWN_CAR_N": {
+    "plain_name": "Car ownership",
+    "subject": "Not owning a car",
+    "meaning": "Whether the applicant owns a car or motor vehicle.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "FLAG_OWN_CAR",
+    "category": "N",
+    "one_hot": {
+      "value_1": "Not owning a car",
+      "value_0": "Owning a car",
+      "fallback_0": "Owning a car"
+    },
+    "summary_name": "car ownership"
+  },
+  "FLAG_OWN_CAR_Y": {
+    "plain_name": "Car ownership",
+    "subject": "Owning a car",
+    "meaning": "Whether the applicant owns a car or motor vehicle.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "FLAG_OWN_CAR",
+    "category": "Y",
+    "one_hot": {
+      "value_1": "Owning a car",
+      "value_0": "Not owning a car",
+      "fallback_0": "Not owning a car"
+    },
+    "summary_name": "car ownership"
+  },
+  "FLAG_OWN_REALTY_N": {
+    "plain_name": "Property ownership",
+    "subject": "Not owning property",
+    "meaning": "Whether the applicant owns real estate property or a house.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "FLAG_OWN_REALTY",
+    "category": "N",
+    "one_hot": {
+      "value_1": "Not owning property",
+      "value_0": "Owning property",
+      "fallback_0": "Owning property"
+    },
+    "summary_name": "property ownership"
+  },
+  "FLAG_OWN_REALTY_Y": {
+    "plain_name": "Property ownership",
+    "subject": "Owning property",
+    "meaning": "Whether the applicant owns real estate property or a house.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "FLAG_OWN_REALTY",
+    "category": "Y",
+    "one_hot": {
+      "value_1": "Owning property",
+      "value_0": "Not owning property",
+      "fallback_0": "Not owning property"
+    },
+    "summary_name": "property ownership"
+  },
+  "NAME_TYPE_SUITE_Children": {
+    "plain_name": "Accompanied by",
+    "subject": "Your accompanied status (Children)",
+    "meaning": "Who accompanied the client when applying for the loan.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "NAME_TYPE_SUITE",
+    "category": "Children",
+    "one_hot": {
+      "value_1": "Your accompanied status (Children)",
+      "value_0": "Not being in the 'Children' accompanied status group",
+      "fallback_0": "Not being in the 'Children' group"
+    },
+    "summary_name": "accompanied status"
+  },
+  "NAME_TYPE_SUITE_Family": {
+    "plain_name": "Accompanied by",
+    "subject": "Your accompanied status (Family)",
+    "meaning": "Who accompanied the client when applying for the loan.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "NAME_TYPE_SUITE",
+    "category": "Family",
+    "one_hot": {
+      "value_1": "Your accompanied status (Family)",
+      "value_0": "Not being in the 'Family' accompanied status group",
+      "fallback_0": "Not being in the 'Family' group"
+    },
+    "summary_name": "accompanied status"
+  },
+  "NAME_TYPE_SUITE_Group of people": {
+    "plain_name": "Accompanied by",
+    "subject": "Your accompanied status (Group of people)",
+    "meaning": "Who accompanied the client when applying for the loan.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "NAME_TYPE_SUITE",
+    "category": "Group of people",
+    "one_hot": {
+      "value_1": "Your accompanied status (Group of people)",
+      "value_0": "Not being in the 'Group of people' accompanied status group",
+      "fallback_0": "Not being in the 'Group of people' group"
+    },
+    "summary_name": "accompanied status"
+  },
+  "NAME_TYPE_SUITE_Other_A": {
+    "plain_name": "Accompanied by",
+    "subject": "Your accompanied status (Other_A)",
+    "meaning": "Who accompanied the client when applying for the loan.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "NAME_TYPE_SUITE",
+    "category": "Other_A",
+    "one_hot": {
+      "value_1": "Your accompanied status (Other_A)",
+      "value_0": "Not being in the 'Other_A' accompanied status group",
+      "fallback_0": "Not being in the 'Other_A' group"
+    },
+    "summary_name": "accompanied status"
+  },
+  "NAME_TYPE_SUITE_Other_B": {
+    "plain_name": "Accompanied by",
+    "subject": "Your accompanied status (Other_B)",
+    "meaning": "Who accompanied the client when applying for the loan.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "NAME_TYPE_SUITE",
+    "category": "Other_B",
+    "one_hot": {
+      "value_1": "Your accompanied status (Other_B)",
+      "value_0": "Not being in the 'Other_B' accompanied status group",
+      "fallback_0": "Not being in the 'Other_B' group"
+    },
+    "summary_name": "accompanied status"
+  },
+  "NAME_TYPE_SUITE_Spouse, partner": {
+    "plain_name": "Accompanied by",
+    "subject": "Your accompanied status (Spouse, partner)",
+    "meaning": "Who accompanied the client when applying for the loan.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "NAME_TYPE_SUITE",
+    "category": "Spouse, partner",
+    "one_hot": {
+      "value_1": "Your accompanied status (Spouse, partner)",
+      "value_0": "Not being in the 'Spouse, partner' accompanied status group",
+      "fallback_0": "Not being in the 'Spouse, partner' group"
+    },
+    "summary_name": "accompanied status"
+  },
+  "NAME_TYPE_SUITE_Unaccompanied": {
+    "plain_name": "Accompanied by",
+    "subject": "Your accompanied status (Unaccompanied)",
+    "meaning": "Who accompanied the client when applying for the loan.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "NAME_TYPE_SUITE",
+    "category": "Unaccompanied",
+    "one_hot": {
+      "value_1": "Your accompanied status (Unaccompanied)",
+      "value_0": "Not being in the 'Unaccompanied' accompanied status group",
+      "fallback_0": "Not being in the 'Unaccompanied' group"
+    },
+    "summary_name": "accompanied status"
+  },
+  "NAME_TYPE_SUITE_nan": {
+    "plain_name": "Accompanied by (not provided)",
+    "subject": "Leaving accompanied status blank",
+    "meaning": "Who accompanied the client when applying for the loan.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "NAME_TYPE_SUITE",
+    "category": "nan",
+    "one_hot": {
+      "value_1": "Leaving accompanied status blank",
+      "value_0": "Providing accompanied status",
+      "fallback_0": "Providing accompanied status"
+    },
+    "summary_name": "accompanied status left blank"
+  },
+  "NAME_INCOME_TYPE_Commercial associate": {
+    "plain_name": "Income type",
+    "subject": "Your income type (Commercial associate)",
+    "meaning": "The main source and classification of the client income.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "NAME_INCOME_TYPE",
+    "category": "Commercial associate",
+    "one_hot": {
+      "value_1": "Your income type (Commercial associate)",
+      "value_0": "Not being in the 'Commercial associate' income type group",
+      "fallback_0": "Not being in the 'Commercial associate' group"
+    },
+    "summary_name": "income type"
+  },
+  "NAME_INCOME_TYPE_Pensioner": {
+    "plain_name": "Income type",
+    "subject": "Your income type (Pensioner)",
+    "meaning": "The main source and classification of the client income.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "NAME_INCOME_TYPE",
+    "category": "Pensioner",
+    "one_hot": {
+      "value_1": "Your income type (Pensioner)",
+      "value_0": "Not being in the 'Pensioner' income type group",
+      "fallback_0": "Not being in the 'Pensioner' group"
+    },
+    "summary_name": "income type"
+  },
+  "NAME_INCOME_TYPE_State servant": {
+    "plain_name": "Income type",
+    "subject": "Your income type (State servant)",
+    "meaning": "The main source and classification of the client income.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "NAME_INCOME_TYPE",
+    "category": "State servant",
+    "one_hot": {
+      "value_1": "Your income type (State servant)",
+      "value_0": "Not being in the 'State servant' income type group",
+      "fallback_0": "Not being in the 'State servant' group"
+    },
+    "summary_name": "income type"
+  },
+  "NAME_INCOME_TYPE_Working": {
+    "plain_name": "Income type",
+    "subject": "Your income type (Working)",
+    "meaning": "The main source and classification of the client income.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "NAME_INCOME_TYPE",
+    "category": "Working",
+    "one_hot": {
+      "value_1": "Your income type (Working)",
+      "value_0": "Not being in the 'Working' income type group",
+      "fallback_0": "Not being in the 'Working' group"
+    },
+    "summary_name": "income type"
+  },
+  "NAME_EDUCATION_TYPE_Higher education": {
+    "plain_name": "Education level",
+    "subject": "Your education level (Higher education)",
+    "meaning": "The highest level of formal education completed by the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "NAME_EDUCATION_TYPE",
+    "category": "Higher education",
+    "one_hot": {
+      "value_1": "Your education level (Higher education)",
+      "value_0": "Not being in the 'Higher education' education level group",
+      "fallback_0": "Not being in the 'Higher education' group"
+    },
+    "summary_name": "education level"
+  },
+  "NAME_EDUCATION_TYPE_Incomplete higher": {
+    "plain_name": "Education level",
+    "subject": "Your education level (Incomplete higher)",
+    "meaning": "The highest level of formal education completed by the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "NAME_EDUCATION_TYPE",
+    "category": "Incomplete higher",
+    "one_hot": {
+      "value_1": "Your education level (Incomplete higher)",
+      "value_0": "Not being in the 'Incomplete higher' education level group",
+      "fallback_0": "Not being in the 'Incomplete higher' group"
+    },
+    "summary_name": "education level"
+  },
+  "NAME_EDUCATION_TYPE_Lower secondary": {
+    "plain_name": "Education level",
+    "subject": "Your education level (Lower secondary)",
+    "meaning": "The highest level of formal education completed by the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "NAME_EDUCATION_TYPE",
+    "category": "Lower secondary",
+    "one_hot": {
+      "value_1": "Your education level (Lower secondary)",
+      "value_0": "Not being in the 'Lower secondary' education level group",
+      "fallback_0": "Not being in the 'Lower secondary' group"
+    },
+    "summary_name": "education level"
+  },
+  "NAME_EDUCATION_TYPE_Secondary / secondary special": {
+    "plain_name": "Education level",
+    "subject": "Your education level (Secondary / secondary special)",
+    "meaning": "The highest level of formal education completed by the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "NAME_EDUCATION_TYPE",
+    "category": "Secondary / secondary special",
+    "one_hot": {
+      "value_1": "Your education level (Secondary / secondary special)",
+      "value_0": "Not being in the 'Secondary / secondary special' education level group",
+      "fallback_0": "Not being in the 'Secondary / secondary special' group"
+    },
+    "summary_name": "education level"
+  },
+  "NAME_FAMILY_STATUS_Civil marriage": {
+    "plain_name": "Family status",
+    "subject": "Your family status (Civil marriage)",
+    "meaning": "The marital and family status of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "NAME_FAMILY_STATUS",
+    "category": "Civil marriage",
+    "one_hot": {
+      "value_1": "Your family status (Civil marriage)",
+      "value_0": "Not being in the 'Civil marriage' family status group",
+      "fallback_0": "Not being in the 'Civil marriage' group"
+    },
+    "summary_name": "family status"
+  },
+  "NAME_FAMILY_STATUS_Married": {
+    "plain_name": "Family status",
+    "subject": "Your family status (Married)",
+    "meaning": "The marital and family status of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "NAME_FAMILY_STATUS",
+    "category": "Married",
+    "one_hot": {
+      "value_1": "Your family status (Married)",
+      "value_0": "Not being in the 'Married' family status group",
+      "fallback_0": "Not being in the 'Married' group"
+    },
+    "summary_name": "family status"
+  },
+  "NAME_FAMILY_STATUS_Separated": {
+    "plain_name": "Family status",
+    "subject": "Your family status (Separated)",
+    "meaning": "The marital and family status of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "NAME_FAMILY_STATUS",
+    "category": "Separated",
+    "one_hot": {
+      "value_1": "Your family status (Separated)",
+      "value_0": "Not being in the 'Separated' family status group",
+      "fallback_0": "Not being in the 'Separated' group"
+    },
+    "summary_name": "family status"
+  },
+  "NAME_FAMILY_STATUS_Single / not married": {
+    "plain_name": "Family status",
+    "subject": "Your family status (Single / not married)",
+    "meaning": "The marital and family status of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "NAME_FAMILY_STATUS",
+    "category": "Single / not married",
+    "one_hot": {
+      "value_1": "Your family status (Single / not married)",
+      "value_0": "Not being in the 'Single / not married' family status group",
+      "fallback_0": "Not being in the 'Single / not married' group"
+    },
+    "summary_name": "family status"
+  },
+  "NAME_FAMILY_STATUS_Widow": {
+    "plain_name": "Family status",
+    "subject": "Your family status (Widow)",
+    "meaning": "The marital and family status of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "NAME_FAMILY_STATUS",
+    "category": "Widow",
+    "one_hot": {
+      "value_1": "Your family status (Widow)",
+      "value_0": "Not being in the 'Widow' family status group",
+      "fallback_0": "Not being in the 'Widow' group"
+    },
+    "summary_name": "family status"
+  },
+  "NAME_HOUSING_TYPE_Co-op apartment": {
+    "plain_name": "Housing type",
+    "subject": "Your housing type (Co-op apartment)",
+    "meaning": "The housing living arrangement and accommodation situation of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "NAME_HOUSING_TYPE",
+    "category": "Co-op apartment",
+    "one_hot": {
+      "value_1": "Your housing type (Co-op apartment)",
+      "value_0": "Not being in the 'Co-op apartment' housing type group",
+      "fallback_0": "Not being in the 'Co-op apartment' group"
+    },
+    "summary_name": "housing type"
+  },
+  "NAME_HOUSING_TYPE_House / apartment": {
+    "plain_name": "Housing type",
+    "subject": "Your housing type (House / apartment)",
+    "meaning": "The housing living arrangement and accommodation situation of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "NAME_HOUSING_TYPE",
+    "category": "House / apartment",
+    "one_hot": {
+      "value_1": "Your housing type (House / apartment)",
+      "value_0": "Not being in the 'House / apartment' housing type group",
+      "fallback_0": "Not being in the 'House / apartment' group"
+    },
+    "summary_name": "housing type"
+  },
+  "NAME_HOUSING_TYPE_Municipal apartment": {
+    "plain_name": "Housing type",
+    "subject": "Your housing type (Municipal apartment)",
+    "meaning": "The housing living arrangement and accommodation situation of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "NAME_HOUSING_TYPE",
+    "category": "Municipal apartment",
+    "one_hot": {
+      "value_1": "Your housing type (Municipal apartment)",
+      "value_0": "Not being in the 'Municipal apartment' housing type group",
+      "fallback_0": "Not being in the 'Municipal apartment' group"
+    },
+    "summary_name": "housing type"
+  },
+  "NAME_HOUSING_TYPE_Office apartment": {
+    "plain_name": "Housing type",
+    "subject": "Your housing type (Office apartment)",
+    "meaning": "The housing living arrangement and accommodation situation of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "NAME_HOUSING_TYPE",
+    "category": "Office apartment",
+    "one_hot": {
+      "value_1": "Your housing type (Office apartment)",
+      "value_0": "Not being in the 'Office apartment' housing type group",
+      "fallback_0": "Not being in the 'Office apartment' group"
+    },
+    "summary_name": "housing type"
+  },
+  "NAME_HOUSING_TYPE_Rented apartment": {
+    "plain_name": "Housing type",
+    "subject": "Your housing type (Rented apartment)",
+    "meaning": "The housing living arrangement and accommodation situation of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "NAME_HOUSING_TYPE",
+    "category": "Rented apartment",
+    "one_hot": {
+      "value_1": "Your housing type (Rented apartment)",
+      "value_0": "Not being in the 'Rented apartment' housing type group",
+      "fallback_0": "Not being in the 'Rented apartment' group"
+    },
+    "summary_name": "housing type"
+  },
+  "NAME_HOUSING_TYPE_With parents": {
+    "plain_name": "Housing type",
+    "subject": "Your housing type (With parents)",
+    "meaning": "The housing living arrangement and accommodation situation of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "NAME_HOUSING_TYPE",
+    "category": "With parents",
+    "one_hot": {
+      "value_1": "Your housing type (With parents)",
+      "value_0": "Not being in the 'With parents' housing type group",
+      "fallback_0": "Not being in the 'With parents' group"
+    },
+    "summary_name": "housing type"
+  },
+  "OCCUPATION_TYPE_Accountants": {
+    "plain_name": "Occupation",
+    "subject": "Your occupation (Accountants)",
+    "meaning": "The specific job role or occupation category of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "OCCUPATION_TYPE",
+    "category": "Accountants",
+    "one_hot": {
+      "value_1": "Your occupation (Accountants)",
+      "value_0": "Not being in the 'Accountants' occupation group",
+      "fallback_0": "Not being in the 'Accountants' group"
+    },
+    "summary_name": "occupation"
+  },
+  "OCCUPATION_TYPE_Cleaning staff": {
+    "plain_name": "Occupation",
+    "subject": "Your occupation (Cleaning staff)",
+    "meaning": "The specific job role or occupation category of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "OCCUPATION_TYPE",
+    "category": "Cleaning staff",
+    "one_hot": {
+      "value_1": "Your occupation (Cleaning staff)",
+      "value_0": "Not being in the 'Cleaning staff' occupation group",
+      "fallback_0": "Not being in the 'Cleaning staff' group"
+    },
+    "summary_name": "occupation"
+  },
+  "OCCUPATION_TYPE_Cooking staff": {
+    "plain_name": "Occupation",
+    "subject": "Your occupation (Cooking staff)",
+    "meaning": "The specific job role or occupation category of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "OCCUPATION_TYPE",
+    "category": "Cooking staff",
+    "one_hot": {
+      "value_1": "Your occupation (Cooking staff)",
+      "value_0": "Not being in the 'Cooking staff' occupation group",
+      "fallback_0": "Not being in the 'Cooking staff' group"
+    },
+    "summary_name": "occupation"
+  },
+  "OCCUPATION_TYPE_Core staff": {
+    "plain_name": "Occupation",
+    "subject": "Your occupation (Core staff)",
+    "meaning": "The specific job role or occupation category of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "OCCUPATION_TYPE",
+    "category": "Core staff",
+    "one_hot": {
+      "value_1": "Your occupation (Core staff)",
+      "value_0": "Not being in the 'Core staff' occupation group",
+      "fallback_0": "Not being in the 'Core staff' group"
+    },
+    "summary_name": "occupation"
+  },
+  "OCCUPATION_TYPE_Drivers": {
+    "plain_name": "Occupation",
+    "subject": "Your occupation (Drivers)",
+    "meaning": "The specific job role or occupation category of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "OCCUPATION_TYPE",
+    "category": "Drivers",
+    "one_hot": {
+      "value_1": "Your occupation (Drivers)",
+      "value_0": "Not being in the 'Drivers' occupation group",
+      "fallback_0": "Not being in the 'Drivers' group"
+    },
+    "summary_name": "occupation"
+  },
+  "OCCUPATION_TYPE_HR staff": {
+    "plain_name": "Occupation",
+    "subject": "Your occupation (HR staff)",
+    "meaning": "The specific job role or occupation category of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "OCCUPATION_TYPE",
+    "category": "HR staff",
+    "one_hot": {
+      "value_1": "Your occupation (HR staff)",
+      "value_0": "Not being in the 'HR staff' occupation group",
+      "fallback_0": "Not being in the 'HR staff' group"
+    },
+    "summary_name": "occupation"
+  },
+  "OCCUPATION_TYPE_High skill tech staff": {
+    "plain_name": "Occupation",
+    "subject": "Your occupation (High skill tech staff)",
+    "meaning": "The specific job role or occupation category of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "OCCUPATION_TYPE",
+    "category": "High skill tech staff",
+    "one_hot": {
+      "value_1": "Your occupation (High skill tech staff)",
+      "value_0": "Not being in the 'High skill tech staff' occupation group",
+      "fallback_0": "Not being in the 'High skill tech staff' group"
+    },
+    "summary_name": "occupation"
+  },
+  "OCCUPATION_TYPE_IT staff": {
+    "plain_name": "Occupation",
+    "subject": "Your occupation (IT staff)",
+    "meaning": "The specific job role or occupation category of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "OCCUPATION_TYPE",
+    "category": "IT staff",
+    "one_hot": {
+      "value_1": "Your occupation (IT staff)",
+      "value_0": "Not being in the 'IT staff' occupation group",
+      "fallback_0": "Not being in the 'IT staff' group"
+    },
+    "summary_name": "occupation"
+  },
+  "OCCUPATION_TYPE_Laborers": {
+    "plain_name": "Occupation",
+    "subject": "Your occupation (Laborers)",
+    "meaning": "The specific job role or occupation category of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "OCCUPATION_TYPE",
+    "category": "Laborers",
+    "one_hot": {
+      "value_1": "Your occupation (Laborers)",
+      "value_0": "Not being in the 'Laborers' occupation group",
+      "fallback_0": "Not being in the 'Laborers' group"
+    },
+    "summary_name": "occupation"
+  },
+  "OCCUPATION_TYPE_Low-skill Laborers": {
+    "plain_name": "Occupation",
+    "subject": "Your occupation (Low-skill Laborers)",
+    "meaning": "The specific job role or occupation category of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "OCCUPATION_TYPE",
+    "category": "Low-skill Laborers",
+    "one_hot": {
+      "value_1": "Your occupation (Low-skill Laborers)",
+      "value_0": "Not being in the 'Low-skill Laborers' occupation group",
+      "fallback_0": "Not being in the 'Low-skill Laborers' group"
+    },
+    "summary_name": "occupation"
+  },
+  "OCCUPATION_TYPE_Managers": {
+    "plain_name": "Occupation",
+    "subject": "Your occupation (Managers)",
+    "meaning": "The specific job role or occupation category of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "OCCUPATION_TYPE",
+    "category": "Managers",
+    "one_hot": {
+      "value_1": "Your occupation (Managers)",
+      "value_0": "Not being in the 'Managers' occupation group",
+      "fallback_0": "Not being in the 'Managers' group"
+    },
+    "summary_name": "occupation"
+  },
+  "OCCUPATION_TYPE_Medicine staff": {
+    "plain_name": "Occupation",
+    "subject": "Your occupation (Medicine staff)",
+    "meaning": "The specific job role or occupation category of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "OCCUPATION_TYPE",
+    "category": "Medicine staff",
+    "one_hot": {
+      "value_1": "Your occupation (Medicine staff)",
+      "value_0": "Not being in the 'Medicine staff' occupation group",
+      "fallback_0": "Not being in the 'Medicine staff' group"
+    },
+    "summary_name": "occupation"
+  },
+  "OCCUPATION_TYPE_Private service staff": {
+    "plain_name": "Occupation",
+    "subject": "Your occupation (Private service staff)",
+    "meaning": "The specific job role or occupation category of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "OCCUPATION_TYPE",
+    "category": "Private service staff",
+    "one_hot": {
+      "value_1": "Your occupation (Private service staff)",
+      "value_0": "Not being in the 'Private service staff' occupation group",
+      "fallback_0": "Not being in the 'Private service staff' group"
+    },
+    "summary_name": "occupation"
+  },
+  "OCCUPATION_TYPE_Realty agents": {
+    "plain_name": "Occupation",
+    "subject": "Your occupation (Realty agents)",
+    "meaning": "The specific job role or occupation category of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "OCCUPATION_TYPE",
+    "category": "Realty agents",
+    "one_hot": {
+      "value_1": "Your occupation (Realty agents)",
+      "value_0": "Not being in the 'Realty agents' occupation group",
+      "fallback_0": "Not being in the 'Realty agents' group"
+    },
+    "summary_name": "occupation"
+  },
+  "OCCUPATION_TYPE_Sales staff": {
+    "plain_name": "Occupation",
+    "subject": "Your occupation (Sales staff)",
+    "meaning": "The specific job role or occupation category of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "OCCUPATION_TYPE",
+    "category": "Sales staff",
+    "one_hot": {
+      "value_1": "Your occupation (Sales staff)",
+      "value_0": "Not being in the 'Sales staff' occupation group",
+      "fallback_0": "Not being in the 'Sales staff' group"
+    },
+    "summary_name": "occupation"
+  },
+  "OCCUPATION_TYPE_Secretaries": {
+    "plain_name": "Occupation",
+    "subject": "Your occupation (Secretaries)",
+    "meaning": "The specific job role or occupation category of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "OCCUPATION_TYPE",
+    "category": "Secretaries",
+    "one_hot": {
+      "value_1": "Your occupation (Secretaries)",
+      "value_0": "Not being in the 'Secretaries' occupation group",
+      "fallback_0": "Not being in the 'Secretaries' group"
+    },
+    "summary_name": "occupation"
+  },
+  "OCCUPATION_TYPE_Security staff": {
+    "plain_name": "Occupation",
+    "subject": "Your occupation (Security staff)",
+    "meaning": "The specific job role or occupation category of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "OCCUPATION_TYPE",
+    "category": "Security staff",
+    "one_hot": {
+      "value_1": "Your occupation (Security staff)",
+      "value_0": "Not being in the 'Security staff' occupation group",
+      "fallback_0": "Not being in the 'Security staff' group"
+    },
+    "summary_name": "occupation"
+  },
+  "OCCUPATION_TYPE_Waiters/barmen staff": {
+    "plain_name": "Occupation",
+    "subject": "Your occupation (Waiters/barmen staff)",
+    "meaning": "The specific job role or occupation category of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "OCCUPATION_TYPE",
+    "category": "Waiters/barmen staff",
+    "one_hot": {
+      "value_1": "Your occupation (Waiters/barmen staff)",
+      "value_0": "Not being in the 'Waiters/barmen staff' occupation group",
+      "fallback_0": "Not being in the 'Waiters/barmen staff' group"
+    },
+    "summary_name": "occupation"
+  },
+  "OCCUPATION_TYPE_nan": {
+    "plain_name": "Occupation (not provided)",
+    "subject": "Leaving occupation blank",
+    "meaning": "The specific job role or occupation category of the applicant.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "OCCUPATION_TYPE",
+    "category": "nan",
+    "one_hot": {
+      "value_1": "Leaving occupation blank",
+      "value_0": "Providing an occupation",
+      "fallback_0": "Providing an occupation"
+    },
+    "summary_name": "occupation left blank"
+  },
+  "WEEKDAY_APPR_PROCESS_START_FRIDAY": {
+    "plain_name": "Application weekday",
+    "subject": "Your application weekday (FRIDAY)",
+    "meaning": "The day of the week on which the loan application process was initiated.",
+    "user_entered": "yes",
+    "group": "admin_only",
+    "prefix": "WEEKDAY_APPR_PROCESS_START",
+    "category": "FRIDAY",
+    "one_hot": {
+      "value_1": "Your application weekday (FRIDAY)",
+      "value_0": "Not being in the 'FRIDAY' application weekday group",
+      "fallback_0": "Not being in the 'FRIDAY' group"
+    }
+  },
+  "WEEKDAY_APPR_PROCESS_START_MONDAY": {
+    "plain_name": "Application weekday",
+    "subject": "Your application weekday (MONDAY)",
+    "meaning": "The day of the week on which the loan application process was initiated.",
+    "user_entered": "yes",
+    "group": "admin_only",
+    "prefix": "WEEKDAY_APPR_PROCESS_START",
+    "category": "MONDAY",
+    "one_hot": {
+      "value_1": "Your application weekday (MONDAY)",
+      "value_0": "Not being in the 'MONDAY' application weekday group",
+      "fallback_0": "Not being in the 'MONDAY' group"
+    }
+  },
+  "WEEKDAY_APPR_PROCESS_START_SATURDAY": {
+    "plain_name": "Application weekday",
+    "subject": "Your application weekday (SATURDAY)",
+    "meaning": "The day of the week on which the loan application process was initiated.",
+    "user_entered": "yes",
+    "group": "admin_only",
+    "prefix": "WEEKDAY_APPR_PROCESS_START",
+    "category": "SATURDAY",
+    "one_hot": {
+      "value_1": "Your application weekday (SATURDAY)",
+      "value_0": "Not being in the 'SATURDAY' application weekday group",
+      "fallback_0": "Not being in the 'SATURDAY' group"
+    }
+  },
+  "WEEKDAY_APPR_PROCESS_START_SUNDAY": {
+    "plain_name": "Application weekday",
+    "subject": "Your application weekday (SUNDAY)",
+    "meaning": "The day of the week on which the loan application process was initiated.",
+    "user_entered": "yes",
+    "group": "admin_only",
+    "prefix": "WEEKDAY_APPR_PROCESS_START",
+    "category": "SUNDAY",
+    "one_hot": {
+      "value_1": "Your application weekday (SUNDAY)",
+      "value_0": "Not being in the 'SUNDAY' application weekday group",
+      "fallback_0": "Not being in the 'SUNDAY' group"
+    }
+  },
+  "WEEKDAY_APPR_PROCESS_START_THURSDAY": {
+    "plain_name": "Application weekday",
+    "subject": "Your application weekday (THURSDAY)",
+    "meaning": "The day of the week on which the loan application process was initiated.",
+    "user_entered": "yes",
+    "group": "admin_only",
+    "prefix": "WEEKDAY_APPR_PROCESS_START",
+    "category": "THURSDAY",
+    "one_hot": {
+      "value_1": "Your application weekday (THURSDAY)",
+      "value_0": "Not being in the 'THURSDAY' application weekday group",
+      "fallback_0": "Not being in the 'THURSDAY' group"
+    }
+  },
+  "WEEKDAY_APPR_PROCESS_START_TUESDAY": {
+    "plain_name": "Application weekday",
+    "subject": "Your application weekday (TUESDAY)",
+    "meaning": "The day of the week on which the loan application process was initiated.",
+    "user_entered": "yes",
+    "group": "admin_only",
+    "prefix": "WEEKDAY_APPR_PROCESS_START",
+    "category": "TUESDAY",
+    "one_hot": {
+      "value_1": "Your application weekday (TUESDAY)",
+      "value_0": "Not being in the 'TUESDAY' application weekday group",
+      "fallback_0": "Not being in the 'TUESDAY' group"
+    }
+  },
+  "WEEKDAY_APPR_PROCESS_START_WEDNESDAY": {
+    "plain_name": "Application weekday",
+    "subject": "Your application weekday (WEDNESDAY)",
+    "meaning": "The day of the week on which the loan application process was initiated.",
+    "user_entered": "yes",
+    "group": "admin_only",
+    "prefix": "WEEKDAY_APPR_PROCESS_START",
+    "category": "WEDNESDAY",
+    "one_hot": {
+      "value_1": "Your application weekday (WEDNESDAY)",
+      "value_0": "Not being in the 'WEDNESDAY' application weekday group",
+      "fallback_0": "Not being in the 'WEDNESDAY' group"
+    }
+  },
+  "ORGANIZATION_TYPE_Advertising": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Advertising)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Advertising",
+    "one_hot": {
+      "value_1": "Your organization type (Advertising)",
+      "value_0": "Not being in the 'Advertising' organization type group",
+      "fallback_0": "Not being in the 'Advertising' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Agriculture": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Agriculture)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Agriculture",
+    "one_hot": {
+      "value_1": "Your organization type (Agriculture)",
+      "value_0": "Not being in the 'Agriculture' organization type group",
+      "fallback_0": "Not being in the 'Agriculture' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Bank": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Bank)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Bank",
+    "one_hot": {
+      "value_1": "Your organization type (Bank)",
+      "value_0": "Not being in the 'Bank' organization type group",
+      "fallback_0": "Not being in the 'Bank' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Business Entity Type 1": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Business Entity Type 1)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Business Entity Type 1",
+    "one_hot": {
+      "value_1": "Your organization type (Business Entity Type 1)",
+      "value_0": "Not being in the 'Business Entity Type 1' organization type group",
+      "fallback_0": "Not being in the 'Business Entity Type 1' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Business Entity Type 2": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Business Entity Type 2)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Business Entity Type 2",
+    "one_hot": {
+      "value_1": "Your organization type (Business Entity Type 2)",
+      "value_0": "Not being in the 'Business Entity Type 2' organization type group",
+      "fallback_0": "Not being in the 'Business Entity Type 2' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Business Entity Type 3": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Business Entity Type 3)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Business Entity Type 3",
+    "one_hot": {
+      "value_1": "Your organization type (Business Entity Type 3)",
+      "value_0": "Not being in the 'Business Entity Type 3' organization type group",
+      "fallback_0": "Not being in the 'Business Entity Type 3' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Cleaning": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Cleaning)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Cleaning",
+    "one_hot": {
+      "value_1": "Your organization type (Cleaning)",
+      "value_0": "Not being in the 'Cleaning' organization type group",
+      "fallback_0": "Not being in the 'Cleaning' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Construction": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Construction)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Construction",
+    "one_hot": {
+      "value_1": "Your organization type (Construction)",
+      "value_0": "Not being in the 'Construction' organization type group",
+      "fallback_0": "Not being in the 'Construction' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Culture": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Culture)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Culture",
+    "one_hot": {
+      "value_1": "Your organization type (Culture)",
+      "value_0": "Not being in the 'Culture' organization type group",
+      "fallback_0": "Not being in the 'Culture' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Electricity": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Electricity)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Electricity",
+    "one_hot": {
+      "value_1": "Your organization type (Electricity)",
+      "value_0": "Not being in the 'Electricity' organization type group",
+      "fallback_0": "Not being in the 'Electricity' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Emergency": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Emergency)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Emergency",
+    "one_hot": {
+      "value_1": "Your organization type (Emergency)",
+      "value_0": "Not being in the 'Emergency' organization type group",
+      "fallback_0": "Not being in the 'Emergency' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Government": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Government)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Government",
+    "one_hot": {
+      "value_1": "Your organization type (Government)",
+      "value_0": "Not being in the 'Government' organization type group",
+      "fallback_0": "Not being in the 'Government' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Hotel": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Hotel)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Hotel",
+    "one_hot": {
+      "value_1": "Your organization type (Hotel)",
+      "value_0": "Not being in the 'Hotel' organization type group",
+      "fallback_0": "Not being in the 'Hotel' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Housing": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Housing)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Housing",
+    "one_hot": {
+      "value_1": "Your organization type (Housing)",
+      "value_0": "Not being in the 'Housing' organization type group",
+      "fallback_0": "Not being in the 'Housing' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Industry: type 1": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Industry: type 1)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Industry: type 1",
+    "one_hot": {
+      "value_1": "Your organization type (Industry: type 1)",
+      "value_0": "Not being in the 'Industry: type 1' organization type group",
+      "fallback_0": "Not being in the 'Industry: type 1' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Industry: type 11": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Industry: type 11)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Industry: type 11",
+    "one_hot": {
+      "value_1": "Your organization type (Industry: type 11)",
+      "value_0": "Not being in the 'Industry: type 11' organization type group",
+      "fallback_0": "Not being in the 'Industry: type 11' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Industry: type 12": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Industry: type 12)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Industry: type 12",
+    "one_hot": {
+      "value_1": "Your organization type (Industry: type 12)",
+      "value_0": "Not being in the 'Industry: type 12' organization type group",
+      "fallback_0": "Not being in the 'Industry: type 12' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Industry: type 13": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Industry: type 13)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Industry: type 13",
+    "one_hot": {
+      "value_1": "Your organization type (Industry: type 13)",
+      "value_0": "Not being in the 'Industry: type 13' organization type group",
+      "fallback_0": "Not being in the 'Industry: type 13' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Industry: type 2": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Industry: type 2)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Industry: type 2",
+    "one_hot": {
+      "value_1": "Your organization type (Industry: type 2)",
+      "value_0": "Not being in the 'Industry: type 2' organization type group",
+      "fallback_0": "Not being in the 'Industry: type 2' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Industry: type 3": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Industry: type 3)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Industry: type 3",
+    "one_hot": {
+      "value_1": "Your organization type (Industry: type 3)",
+      "value_0": "Not being in the 'Industry: type 3' organization type group",
+      "fallback_0": "Not being in the 'Industry: type 3' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Industry: type 4": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Industry: type 4)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Industry: type 4",
+    "one_hot": {
+      "value_1": "Your organization type (Industry: type 4)",
+      "value_0": "Not being in the 'Industry: type 4' organization type group",
+      "fallback_0": "Not being in the 'Industry: type 4' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Industry: type 5": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Industry: type 5)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Industry: type 5",
+    "one_hot": {
+      "value_1": "Your organization type (Industry: type 5)",
+      "value_0": "Not being in the 'Industry: type 5' organization type group",
+      "fallback_0": "Not being in the 'Industry: type 5' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Industry: type 6": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Industry: type 6)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Industry: type 6",
+    "one_hot": {
+      "value_1": "Your organization type (Industry: type 6)",
+      "value_0": "Not being in the 'Industry: type 6' organization type group",
+      "fallback_0": "Not being in the 'Industry: type 6' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Industry: type 7": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Industry: type 7)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Industry: type 7",
+    "one_hot": {
+      "value_1": "Your organization type (Industry: type 7)",
+      "value_0": "Not being in the 'Industry: type 7' organization type group",
+      "fallback_0": "Not being in the 'Industry: type 7' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Industry: type 8": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Industry: type 8)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Industry: type 8",
+    "one_hot": {
+      "value_1": "Your organization type (Industry: type 8)",
+      "value_0": "Not being in the 'Industry: type 8' organization type group",
+      "fallback_0": "Not being in the 'Industry: type 8' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Industry: type 9": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Industry: type 9)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Industry: type 9",
+    "one_hot": {
+      "value_1": "Your organization type (Industry: type 9)",
+      "value_0": "Not being in the 'Industry: type 9' organization type group",
+      "fallback_0": "Not being in the 'Industry: type 9' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Insurance": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Insurance)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Insurance",
+    "one_hot": {
+      "value_1": "Your organization type (Insurance)",
+      "value_0": "Not being in the 'Insurance' organization type group",
+      "fallback_0": "Not being in the 'Insurance' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Kindergarten": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Kindergarten)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Kindergarten",
+    "one_hot": {
+      "value_1": "Your organization type (Kindergarten)",
+      "value_0": "Not being in the 'Kindergarten' organization type group",
+      "fallback_0": "Not being in the 'Kindergarten' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Legal Services": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Legal Services)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Legal Services",
+    "one_hot": {
+      "value_1": "Your organization type (Legal Services)",
+      "value_0": "Not being in the 'Legal Services' organization type group",
+      "fallback_0": "Not being in the 'Legal Services' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Medicine": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Medicine)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Medicine",
+    "one_hot": {
+      "value_1": "Your organization type (Medicine)",
+      "value_0": "Not being in the 'Medicine' organization type group",
+      "fallback_0": "Not being in the 'Medicine' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Military": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Military)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Military",
+    "one_hot": {
+      "value_1": "Your organization type (Military)",
+      "value_0": "Not being in the 'Military' organization type group",
+      "fallback_0": "Not being in the 'Military' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Mobile": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Mobile)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Mobile",
+    "one_hot": {
+      "value_1": "Your organization type (Mobile)",
+      "value_0": "Not being in the 'Mobile' organization type group",
+      "fallback_0": "Not being in the 'Mobile' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Other": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Other)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Other",
+    "one_hot": {
+      "value_1": "Your organization type (Other)",
+      "value_0": "Not being in the 'Other' organization type group",
+      "fallback_0": "Not being in the 'Other' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Police": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Police)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Police",
+    "one_hot": {
+      "value_1": "Your organization type (Police)",
+      "value_0": "Not being in the 'Police' organization type group",
+      "fallback_0": "Not being in the 'Police' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Postal": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Postal)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Postal",
+    "one_hot": {
+      "value_1": "Your organization type (Postal)",
+      "value_0": "Not being in the 'Postal' organization type group",
+      "fallback_0": "Not being in the 'Postal' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Realtor": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Realtor)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Realtor",
+    "one_hot": {
+      "value_1": "Your organization type (Realtor)",
+      "value_0": "Not being in the 'Realtor' organization type group",
+      "fallback_0": "Not being in the 'Realtor' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Restaurant": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Restaurant)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Restaurant",
+    "one_hot": {
+      "value_1": "Your organization type (Restaurant)",
+      "value_0": "Not being in the 'Restaurant' organization type group",
+      "fallback_0": "Not being in the 'Restaurant' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_School": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (School)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "School",
+    "one_hot": {
+      "value_1": "Your organization type (School)",
+      "value_0": "Not being in the 'School' organization type group",
+      "fallback_0": "Not being in the 'School' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Security": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Security)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Security",
+    "one_hot": {
+      "value_1": "Your organization type (Security)",
+      "value_0": "Not being in the 'Security' organization type group",
+      "fallback_0": "Not being in the 'Security' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Security Ministries": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Security Ministries)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Security Ministries",
+    "one_hot": {
+      "value_1": "Your organization type (Security Ministries)",
+      "value_0": "Not being in the 'Security Ministries' organization type group",
+      "fallback_0": "Not being in the 'Security Ministries' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Self-employed": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Self-employed)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Self-employed",
+    "one_hot": {
+      "value_1": "Your organization type (Self-employed)",
+      "value_0": "Not being in the 'Self-employed' organization type group",
+      "fallback_0": "Not being in the 'Self-employed' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Services": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Services)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Services",
+    "one_hot": {
+      "value_1": "Your organization type (Services)",
+      "value_0": "Not being in the 'Services' organization type group",
+      "fallback_0": "Not being in the 'Services' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Telecom": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Telecom)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Telecom",
+    "one_hot": {
+      "value_1": "Your organization type (Telecom)",
+      "value_0": "Not being in the 'Telecom' organization type group",
+      "fallback_0": "Not being in the 'Telecom' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Trade: type 1": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Trade: type 1)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Trade: type 1",
+    "one_hot": {
+      "value_1": "Your organization type (Trade: type 1)",
+      "value_0": "Not being in the 'Trade: type 1' organization type group",
+      "fallback_0": "Not being in the 'Trade: type 1' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Trade: type 2": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Trade: type 2)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Trade: type 2",
+    "one_hot": {
+      "value_1": "Your organization type (Trade: type 2)",
+      "value_0": "Not being in the 'Trade: type 2' organization type group",
+      "fallback_0": "Not being in the 'Trade: type 2' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Trade: type 3": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Trade: type 3)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Trade: type 3",
+    "one_hot": {
+      "value_1": "Your organization type (Trade: type 3)",
+      "value_0": "Not being in the 'Trade: type 3' organization type group",
+      "fallback_0": "Not being in the 'Trade: type 3' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Trade: type 4": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Trade: type 4)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Trade: type 4",
+    "one_hot": {
+      "value_1": "Your organization type (Trade: type 4)",
+      "value_0": "Not being in the 'Trade: type 4' organization type group",
+      "fallback_0": "Not being in the 'Trade: type 4' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Trade: type 6": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Trade: type 6)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Trade: type 6",
+    "one_hot": {
+      "value_1": "Your organization type (Trade: type 6)",
+      "value_0": "Not being in the 'Trade: type 6' organization type group",
+      "fallback_0": "Not being in the 'Trade: type 6' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Trade: type 7": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Trade: type 7)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Trade: type 7",
+    "one_hot": {
+      "value_1": "Your organization type (Trade: type 7)",
+      "value_0": "Not being in the 'Trade: type 7' organization type group",
+      "fallback_0": "Not being in the 'Trade: type 7' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Transport: type 1": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Transport: type 1)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Transport: type 1",
+    "one_hot": {
+      "value_1": "Your organization type (Transport: type 1)",
+      "value_0": "Not being in the 'Transport: type 1' organization type group",
+      "fallback_0": "Not being in the 'Transport: type 1' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Transport: type 2": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Transport: type 2)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Transport: type 2",
+    "one_hot": {
+      "value_1": "Your organization type (Transport: type 2)",
+      "value_0": "Not being in the 'Transport: type 2' organization type group",
+      "fallback_0": "Not being in the 'Transport: type 2' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Transport: type 3": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Transport: type 3)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Transport: type 3",
+    "one_hot": {
+      "value_1": "Your organization type (Transport: type 3)",
+      "value_0": "Not being in the 'Transport: type 3' organization type group",
+      "fallback_0": "Not being in the 'Transport: type 3' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_Transport: type 4": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (Transport: type 4)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "Transport: type 4",
+    "one_hot": {
+      "value_1": "Your organization type (Transport: type 4)",
+      "value_0": "Not being in the 'Transport: type 4' organization type group",
+      "fallback_0": "Not being in the 'Transport: type 4' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_University": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (University)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "University",
+    "one_hot": {
+      "value_1": "Your organization type (University)",
+      "value_0": "Not being in the 'University' organization type group",
+      "fallback_0": "Not being in the 'University' group"
+    },
+    "summary_name": "organization type"
+  },
+  "ORGANIZATION_TYPE_XNA": {
+    "plain_name": "Organization type",
+    "subject": "Your organization type (XNA)",
+    "meaning": "The industry or organization type of the employer where the applicant works.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "ORGANIZATION_TYPE",
+    "category": "XNA",
+    "one_hot": {
+      "value_1": "Your organization type (XNA)",
+      "value_0": "Not being in the 'XNA' organization type group",
+      "fallback_0": "Not being in the 'XNA' group"
+    },
+    "summary_name": "organization type"
+  },
+  "HOUSETYPE_MODE_block of flats": {
+    "plain_name": "House type mode",
+    "subject": "Your house type mode (block of flats)",
+    "meaning": "Building type classification for the property.",
+    "user_entered": "no",
+    "group": "hidden",
+    "prefix": "HOUSETYPE_MODE",
+    "category": "block of flats",
+    "one_hot": {
+      "value_1": "Your house type mode (block of flats)",
+      "value_0": "Not being in the 'block of flats' house type mode group",
+      "fallback_0": "Not being in the 'block of flats' group"
+    }
+  },
+  "HOUSETYPE_MODE_specific housing": {
+    "plain_name": "House type mode",
+    "subject": "Your house type mode (specific housing)",
+    "meaning": "Building type classification for the property.",
+    "user_entered": "no",
+    "group": "hidden",
+    "prefix": "HOUSETYPE_MODE",
+    "category": "specific housing",
+    "one_hot": {
+      "value_1": "Your house type mode (specific housing)",
+      "value_0": "Not being in the 'specific housing' house type mode group",
+      "fallback_0": "Not being in the 'specific housing' group"
+    }
+  },
+  "HOUSETYPE_MODE_terraced house": {
+    "plain_name": "House type mode",
+    "subject": "Your house type mode (terraced house)",
+    "meaning": "Building type classification for the property.",
+    "user_entered": "no",
+    "group": "hidden",
+    "prefix": "HOUSETYPE_MODE",
+    "category": "terraced house",
+    "one_hot": {
+      "value_1": "Your house type mode (terraced house)",
+      "value_0": "Not being in the 'terraced house' house type mode group",
+      "fallback_0": "Not being in the 'terraced house' group"
+    }
+  },
+  "HOUSETYPE_MODE_nan": {
+    "plain_name": "House type mode (not provided)",
+    "subject": "Leaving house type mode blank",
+    "meaning": "Building type classification for the property.",
+    "user_entered": "no",
+    "group": "hidden",
+    "prefix": "HOUSETYPE_MODE",
+    "category": "nan",
+    "one_hot": {
+      "value_1": "Leaving house type mode blank",
+      "value_0": "Providing house type mode",
+      "fallback_0": "Providing house type mode"
+    }
+  },
+  "WALLSMATERIAL_MODE_Block": {
+    "plain_name": "Wall material mode",
+    "subject": "Your wall material mode (Block)",
+    "meaning": "Building materials used in the applicant residential walls.",
+    "user_entered": "no",
+    "group": "hidden",
+    "prefix": "WALLSMATERIAL_MODE",
+    "category": "Block",
+    "one_hot": {
+      "value_1": "Your wall material mode (Block)",
+      "value_0": "Not being in the 'Block' wall material mode group",
+      "fallback_0": "Not being in the 'Block' group"
+    }
+  },
+  "WALLSMATERIAL_MODE_Mixed": {
+    "plain_name": "Wall material mode",
+    "subject": "Your wall material mode (Mixed)",
+    "meaning": "Building materials used in the applicant residential walls.",
+    "user_entered": "no",
+    "group": "hidden",
+    "prefix": "WALLSMATERIAL_MODE",
+    "category": "Mixed",
+    "one_hot": {
+      "value_1": "Your wall material mode (Mixed)",
+      "value_0": "Not being in the 'Mixed' wall material mode group",
+      "fallback_0": "Not being in the 'Mixed' group"
+    }
+  },
+  "WALLSMATERIAL_MODE_Monolithic": {
+    "plain_name": "Wall material mode",
+    "subject": "Your wall material mode (Monolithic)",
+    "meaning": "Building materials used in the applicant residential walls.",
+    "user_entered": "no",
+    "group": "hidden",
+    "prefix": "WALLSMATERIAL_MODE",
+    "category": "Monolithic",
+    "one_hot": {
+      "value_1": "Your wall material mode (Monolithic)",
+      "value_0": "Not being in the 'Monolithic' wall material mode group",
+      "fallback_0": "Not being in the 'Monolithic' group"
+    }
+  },
+  "WALLSMATERIAL_MODE_Others": {
+    "plain_name": "Wall material mode",
+    "subject": "Your wall material mode (Others)",
+    "meaning": "Building materials used in the applicant residential walls.",
+    "user_entered": "no",
+    "group": "hidden",
+    "prefix": "WALLSMATERIAL_MODE",
+    "category": "Others",
+    "one_hot": {
+      "value_1": "Your wall material mode (Others)",
+      "value_0": "Not being in the 'Others' wall material mode group",
+      "fallback_0": "Not being in the 'Others' group"
+    }
+  },
+  "WALLSMATERIAL_MODE_Panel": {
+    "plain_name": "Wall material mode",
+    "subject": "Your wall material mode (Panel)",
+    "meaning": "Building materials used in the applicant residential walls.",
+    "user_entered": "no",
+    "group": "hidden",
+    "prefix": "WALLSMATERIAL_MODE",
+    "category": "Panel",
+    "one_hot": {
+      "value_1": "Your wall material mode (Panel)",
+      "value_0": "Not being in the 'Panel' wall material mode group",
+      "fallback_0": "Not being in the 'Panel' group"
+    }
+  },
+  "WALLSMATERIAL_MODE_Stone, brick": {
+    "plain_name": "Wall material mode",
+    "subject": "Your wall material mode (Stone, brick)",
+    "meaning": "Building materials used in the applicant residential walls.",
+    "user_entered": "no",
+    "group": "hidden",
+    "prefix": "WALLSMATERIAL_MODE",
+    "category": "Stone, brick",
+    "one_hot": {
+      "value_1": "Your wall material mode (Stone, brick)",
+      "value_0": "Not being in the 'Stone, brick' wall material mode group",
+      "fallback_0": "Not being in the 'Stone, brick' group"
+    }
+  },
+  "WALLSMATERIAL_MODE_Wooden": {
+    "plain_name": "Wall material mode",
+    "subject": "Your wall material mode (Wooden)",
+    "meaning": "Building materials used in the applicant residential walls.",
+    "user_entered": "no",
+    "group": "hidden",
+    "prefix": "WALLSMATERIAL_MODE",
+    "category": "Wooden",
+    "one_hot": {
+      "value_1": "Your wall material mode (Wooden)",
+      "value_0": "Not being in the 'Wooden' wall material mode group",
+      "fallback_0": "Not being in the 'Wooden' group"
+    }
+  },
+  "WALLSMATERIAL_MODE_nan": {
+    "plain_name": "Wall material mode (not provided)",
+    "subject": "Leaving wall material mode blank",
+    "meaning": "Building materials used in the applicant residential walls.",
+    "user_entered": "no",
+    "group": "hidden",
+    "prefix": "WALLSMATERIAL_MODE",
+    "category": "nan",
+    "one_hot": {
+      "value_1": "Leaving wall material mode blank",
+      "value_0": "Providing wall material mode",
+      "fallback_0": "Providing wall material mode"
+    }
+  },
+  "EMERGENCYSTATE_MODE_No": {
+    "plain_name": "Housing condition question",
+    "subject": "Answering 'No' to the optional housing-condition question",
+    "meaning": "An optional question about the condition of your home. The model uses the answer, whatever it is.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "EMERGENCYSTATE_MODE",
+    "category": "No",
+    "one_hot": {
+      "value_1": "Answering 'No' to the optional housing-condition question",
+      "value_0": "Answering something other than 'No' to the optional housing-condition question",
+      "fallback_0": "Answering something other than 'No' to the optional housing-condition question"
+    },
+    "summary_name": "housing condition question"
+  },
+  "EMERGENCYSTATE_MODE_Yes": {
+    "plain_name": "Housing condition question",
+    "subject": "Answering 'Yes' to the optional housing-condition question",
+    "meaning": "An optional question about the condition of your home. The model uses the answer, whatever it is.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "EMERGENCYSTATE_MODE",
+    "category": "Yes",
+    "one_hot": {
+      "value_1": "Answering 'Yes' to the optional housing-condition question",
+      "value_0": "Answering something other than 'Yes' to the optional housing-condition question",
+      "fallback_0": "Answering something other than 'Yes' to the optional housing-condition question"
+    },
+    "summary_name": "housing condition question"
+  },
+  "EMERGENCYSTATE_MODE_nan": {
+    "plain_name": "Housing condition question (not provided)",
+    "subject": "Leaving housing condition question blank",
+    "meaning": "An optional question about the condition of your home. The model uses the answer, whatever it is.",
+    "user_entered": "yes",
+    "group": "application",
+    "prefix": "EMERGENCYSTATE_MODE",
+    "category": "nan",
+    "one_hot": {
+      "value_1": "Leaving housing condition question blank",
+      "value_0": "Providing housing condition question",
+      "fallback_0": "Providing housing condition question"
+    },
+    "summary_name": "housing condition question left blank"
+  },
+  "credit_income_ratio": {
+    "plain_name": "Credit-to-income ratio",
+    "subject": "Your loan amount compared with your annual income",
+    "meaning": "The total loan amount compared with your annual income.",
+    "user_entered": "derived",
+    "group": "application",
+    "summary_name": "credit to income ratio"
+  },
+  "annuity_income_ratio": {
+    "plain_name": "Repayment-to-income ratio",
+    "subject": "Your annual repayment compared with your annual income",
+    "meaning": "The annual loan repayment amount compared with your annual income.",
+    "user_entered": "derived",
+    "group": "application",
+    "summary_name": "repayment to income ratio"
+  },
+  "employed_age_ratio": {
+    "plain_name": "Employment-to-age ratio",
+    "subject": "The proportion of your adult life spent employed",
+    "meaning": "The proportion of your adult life spent employed.",
+    "user_entered": "derived",
+    "group": "application",
+    "summary_name": "employment to age ratio"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "optional_fields_blank",
+  "title": "Optional Fields and Blank Answers",
+  "topic": "inputs",
+  "keywords_en": [
+    "optional fields",
+    "blank",
+    "not provided",
+    "occupation left blank",
+    "why did leaving occupation blank lower my risk",
+    "unanswered questions",
+    "nan",
+    "missing values"
+  ],
+  "keywords_hi": [
+    "khali choda",
+    "optional field",
+    "vyavasay khali",
+    "nahi bataya",
+    "chut gaya",
+    "\u0916\u093e\u0932\u0940 \u091b\u094b\u0921\u093c\u093e",
+    "\u0935\u094d\u092f\u0935\u0938\u093e\u092f \u0916\u093e\u0932\u0940",
+    "\u0928\u0939\u0940\u0902 \u092c\u0924\u093e\u092f\u093e",
+    "\u091b\u0942\u091f \u0917\u092f\u093e"
+  ],
+  "keywords_mr": [
+    "rikame sodle",
+    "optional field",
+    "vyavasay rikama",
+    "sangitale nahi",
+    "rikami jaga",
+    "\u0930\u093f\u0915\u093e\u092e\u0947 \u0938\u094b\u0921\u0932\u0947",
+    "\u0935\u094d\u092f\u0935\u0938\u093e\u092f \u0930\u093f\u0915\u093e\u092e\u093e",
+    "\u0938\u093e\u0902\u0917\u093f\u0924\u0932\u0947 \u0928\u093e\u0939\u0940",
+    "\u0930\u093f\u0915\u093e\u092e\u0940 \u091c\u093e\u0917\u093e"
+  ],
+  "body": "Fields such as occupation type, suite accompaniment, and housing condition are optional. When left blank, the model processes missing entries using statistical patterns from the training dataset. For example, leaving occupation blank correlated with specific default rates in the historical sample. This is an observed pattern in data, not a personal judgement."
+}

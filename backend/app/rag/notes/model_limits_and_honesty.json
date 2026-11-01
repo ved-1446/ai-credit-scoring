@@ -1,0 +1,45 @@
+{
+  "id": "model_limits_and_honesty",
+  "title": "Model Performance and Honest Limits",
+  "topic": "model",
+  "keywords_en": [
+    "model limits",
+    "how accurate is this",
+    "accuracy",
+    "roc auc",
+    "pr auc",
+    "test metrics",
+    "performance",
+    "precision",
+    "recall",
+    "sample size",
+    "accurate",
+    "small sample",
+    "9000 past loans",
+    "17 out of 100",
+    "42 out of 100",
+    "learning demo"
+  ],
+  "keywords_hi": [
+    "model ki seemaye",
+    "kitna sahi hai",
+    "accuracy",
+    "performance",
+    "kitna shuddh",
+    "\u092e\u0949\u0921\u0932 \u0915\u0940 \u0938\u0940\u092e\u093e\u090f\u0902",
+    "\u092f\u0939 \u092e\u0949\u0921\u0932 \u0915\u093f\u0924\u0928\u093e \u0938\u0939\u0940 \u0939\u0948",
+    "\u0936\u0941\u0926\u094d\u0927\u0924\u093e",
+    "\u0905\u091a\u0942\u0915\u0924\u093e"
+  ],
+  "keywords_mr": [
+    "model chya maryada",
+    "kiti achuk ahe",
+    "accuracy",
+    "performance",
+    "achukata",
+    "\u092e\u0949\u0921\u0947\u0932\u091a\u094d\u092f\u093e \u092e\u0930\u094d\u092f\u093e\u0926\u093e",
+    "\u0939\u0947 \u092e\u0949\u0921\u0947\u0932 \u0915\u093f\u0924\u0940 \u0905\u091a\u0942\u0915 \u0906\u0939\u0947",
+    "\u0905\u091a\u0942\u0915\u0924\u093e"
+  ],
+  "body": "This demo model is not very accurate, and it was built from a small sample of 9,000 past loans. Of every 100 people it flagged as higher risk, only about 17 really did default. Of every 100 people who did default, it caught only about 42. So it often flags people who would have repaid, and it misses many people who did default. The website asks 27 questions and fills the other model inputs with typical values, which changes results a little: in a rough test it flagged about 18% fewer people. Treat it as a learning demo only."
+}

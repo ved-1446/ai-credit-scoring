@@ -1,0 +1,17 @@
+{
+  "en": {
+    "privacy_line": "Note: your chat question is sent to Google's Gemini service to write this answer. On Google's free service, text sent may be used to improve Google's products, so please do not type personal details.",
+    "disclaimer": "Your question is sent to Google's Gemini to write the answer, so please do not type personal details.",
+    "fixed_answer": "I can only help with questions about this credit scoring demo, how your results were calculated, and how the application works. Here are some topics you might find helpful."
+  },
+  "hi": {
+    "privacy_line": "ध्यान दें: इस उत्तर को लिखने के लिए आपका चैट प्रश्न Google की Gemini सेवा को भेजा जाता है। Google की मुफ़्त सेवा में भेजा गया टेक्स्ट Google के उत्पादों को बेहतर बनाने में इस्तेमाल हो सकता है, इसलिए कृपया व्यक्तिगत जानकारी न लिखें।",
+    "disclaimer": "आपका प्रश्न उत्तर लिखने के लिए Google की Gemini सेवा को भेजा जाता है, इसलिए कृपया व्यक्तिगत जानकारी न लिखें।",
+    "fixed_answer": "मैं केवल इस क्रेडिट स्कोरिंग डेमो, आपके परिणाम और यह कैसे काम करता है, इस बारे में मदद कर सकता हूँ।"
+  },
+  "mr": {
+    "privacy_line": "लक्षात ठेवा: हे उत्तर लिहिण्यासाठी तुमचा चॅट प्रश्न Google च्या Gemini सेवेकडे पाठवला जातो. Google च्या मोफत सेवेत पाठवलेला मजकूर Google ची उत्पादने सुधारण्यासाठी वापरला जाऊ शकतो, म्हणून कृपया वैयक्तिक माहिती लिहू नका.",
+    "disclaimer": "उत्तर लिहिण्यासाठी तुमचा प्रश्न Google च्या Gemini सेवेकडे पाठवला जातो, म्हणून कृपया वैयक्तिक माहिती लिहू नका.",
+    "fixed_answer": "मी फक्त या क्रेडिट स्कोअरिंग डेमो, तुमचे निकाल आणि हे कसे काम करते याबाबत मदत करू शकतो."
+  }
+}
