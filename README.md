@@ -6,6 +6,41 @@ Data Dynamo is a full-stack, machine-learning-powered credit scoring web applica
 
 ---
 
+## Live Demo
+
+- **Application URL**: [https://ai-credit-scoring-theta.vercel.app](https://ai-credit-scoring-theta.vercel.app)
+- **Free hosting notice**: The application runs on free-tier hosting (Vercel for frontend, Render for backend). The first sign-in or request after a quiet period can take up to about a minute while the server instance wakes up.
+- **Educational demo**: This site is an educational demonstration. Please enter made-up details only.
+- **Admin console access**: The administrator console is private and not public.
+
+---
+
+## How AI Is Used
+
+- **Explanation summaries and help chat**: Explanation summaries (`/explain`) and the interactive help assistant (`/chat`) use Google's Gemini API (default model: `gemini-3.5-flash-lite`, configurable via `GEMINI_MODEL`).
+- **Data sent for explanations**: Only safe, high-level summary facts are transmitted to the Gemini API: the assessed risk level (`low`, `medium`, `high`, `very high`), the rounded risk score percentage, and plain reason names with their direction (`increases_risk` or `decreases_risk`). Raw inputs, personal information, financial amounts, gender, age, and SHAP mathematical values are never sent.
+- **Data sent for help chat**: The user's chat question text is sent to the Gemini API alongside grounded knowledge notes retrieved via TF-IDF search.
+- **Free-tier data privacy**: On Google's free tier, text sent to the Gemini API may be used by Google to improve its products. Users are reminded never to enter personal details.
+- **Template fallback**: Without a `GEMINI_API_KEY`, or when the service is unreachable or rate limited, the application automatically falls back to fixed template text (deterministic headlines for explanations and standard help notes for chat) without failing.
+
+---
+
+## Honest Limits
+
+- **The model is weak**: On the held-out test set, the model achieves a test ROC-AUC of 0.6974, PR-AUC of 0.1553, precision of 0.168, and recall of 0.4175 at threshold 0.1315. In real terms, about 17 of every 100 flagged people actually default, and about 42 of every 100 defaulters are caught.
+- **Small, noisy test set**: The test set has only about 103 defaulters (out of 1,350 test instances), making the metric estimates noisy.
+- **Score ranking vs true probability**: Because SMOTE was applied during training to balance the classes, the model output is a ranking risk score rather than a true calibrated probability of default. The honest numbers are the empirical default rates of the risk bands measured on a validation sample:
+  - **LOW**: 2.84%
+  - **MEDIUM**: 7.56%
+  - **HIGH**: 18.28%
+  - **VERY HIGH**: 30.88%
+- **Website form vs full model**: These metrics are evaluated from the full 226-column model. The website asks 27 questions and fills the remaining 87 columns with typical (median) values, so website-style precision and recall were never measured separately.
+- **Gender disparity**: Gender is an explicit model input (`CODE_GENDER_F`, `CODE_GENDER_M`). The gender flagged-rate ratio is 0.516, which falls below the common 0.8 four-fifths fairness guideline; this disparity is shown openly on the admin Fairness page.
+- **In-memory rate limits**: API rate-limit counters are kept in process memory, supporting only a single server process.
+- **Unconverted amounts**: Monetary figures are uncalibrated plain numbers (displayed as rupees without currency conversion). Multilingual explanations (Hindi, Marathi) translate narrative text while technical reason names remain in English.
+
+---
+
 ## How It Works
 
 ### Frontend
@@ -26,10 +61,53 @@ Risk levels are relative to the review cut-off (13.15%): Low is below half of it
 - Free-tier Gemini text may be used by Google to improve its products, so users are told not to type personal details.
 
 ### Database
-The application uses SQLAlchemy 2 for persistence, supporting SQLite for local development and PostgreSQL for containerized use. It has four tables: `users` (bcrypt password hashing and roles), `consents` (time-stamped consent records), `predictions` (inputs, probability, risk level and demographic fields for fairness tracking), and `explanations` (cached AI summaries).
+The application uses SQLAlchemy 2 for persistence, supporting SQLite for local development and PostgreSQL for containerized and cloud use. It has four tables: `users` (bcrypt password hashing and roles), `consents` (time-stamped consent records), `predictions` (inputs, probability, risk level and demographic fields for fairness tracking), and `explanations` (cached AI summaries).
 
 ### Docker Architecture
 The containerized deployment consists of three services orchestrated via Docker Compose: a PostgreSQL 16 database with health checks, a Python 3.14-slim backend image bundling the ML artifacts and system libraries (`libgomp1`), and a multi-stage NGINX image serving the React build on port 3000 with client-side routing.
+
+---
+
+## Deployment
+
+The application is architected for deployment across Vercel, Render, and Neon Postgres:
+
+- **Frontend on Vercel**: Hosted as a single-page application. Set the **Root Directory** to `frontend`. The environment variable `VITE_API_URL` must be set at build time to point to the live backend URL.
+- **Backend on Render**: Deployed as a Docker web service using `backend/Dockerfile` with the repository root as the build context.
+- **Database on Neon Postgres**: Cloud serverless PostgreSQL database. Connection credentials are provided via `DATABASE_URL`.
+
+### Critical Deployment Configuration
+
+- **DATABASE_URL format**: Must start with `postgresql+psycopg://` so SQLAlchemy 2 uses the modern `psycopg` (v3) driver (e.g. `postgresql+psycopg://<user>:<password>@<host>/<dbname>?sslmode=require`).
+- **CORS_ORIGINS setting**: Must contain the exact Vercel frontend address (e.g. `https://ai-credit-scoring-theta.vercel.app`) without trailing slashes so the browser allows API requests.
+
+### Environment Variables
+
+All environment variable names configured for the application are described below (taken from `.env.example`). Set these in your hosting platforms or local environment:
+
+| Variable Name | Description |
+|---|---|
+| `SECRET_KEY` | Secret key used for signing JWT access tokens (must be a strong random string in production). |
+| `DATABASE_URL` | Database connection URL (PostgreSQL in Docker/Neon, sqlite:///./dev.db for local development). |
+| `CORS_ORIGINS` | Comma-separated list of allowed CORS origins for browser frontend requests. |
+| `ADMIN_EMAIL` | Email address for the initial admin account seeded at database startup. |
+| `ADMIN_PASSWORD` | Password for the initial admin account seeded at database startup. |
+| `ARTIFACTS_DIR` | Filesystem path to trained ML model and preprocessor artifacts directory (/app/artifacts in Docker). |
+| `POSTGRES_USER` | PostgreSQL container database username used by Docker Compose. |
+| `POSTGRES_PASSWORD` | PostgreSQL container database password used by Docker Compose. |
+| `POSTGRES_DB` | PostgreSQL container database name used by Docker Compose. |
+| `GEMINI_API_KEY` | Google Gemini API key (optional; without it the app uses fixed template text and fallback explanations). |
+| `GEMINI_MODEL` | Gemini model identifier for LLM explanation generation and chat assistance. |
+| `GEMINI_TIMEOUT` | Timeout in seconds for Gemini API generation requests before falling back. |
+| `GEMINI_MAX_CALLS_PER_USER_HOUR` | Maximum /explain LLM API calls permitted per user per hour. |
+| `GEMINI_MAX_CHAT_PER_USER_HOUR` | Maximum /chat LLM API calls permitted per user per hour. |
+| `GEMINI_MAX_CALLS_PER_MINUTE` | Global maximum Gemini API calls allowed across all users per minute. |
+| `GEMINI_MAX_CALLS_PER_DAY` | Global maximum Gemini API calls allowed across all users per day. |
+| `RAG_MIN_SCORE` | Minimum cosine similarity score for TF-IDF RAG note retrieval in /chat (below this returns NOT_SURE). |
+| `GEMINI_TEMPERATURE` | Sampling temperature for Gemini text generation (lower values produce more deterministic responses). |
+| `GEMINI_MAX_OUTPUT_TOKENS` | Maximum output token limit for Gemini generation responses. |
+| `GEMINI_THINKING_LEVEL` | Optional Gemini thinking level config (e.g. LOW, HIGH; left empty by default to disable thinking config). |
+| `VITE_API_URL` | Base URL for backend API baked into the frontend build (used during docker build or local development). |
 
 ---
 
@@ -46,9 +124,9 @@ The containerized deployment consists of three services orchestrated via Docker 
 ## Default Admin Credentials
 
 An administrator user is automatically seeded on backend startup:
-- **Email**: `admin@datadynamo.com`
-- **Password**: The admin password is set with ADMIN_PASSWORD in the .env file. Never commit .env.
-- **Role**: `admin` (opens the separate Admin console: Overview, Predictions, Users, Fairness, Model details and Test lab)
+- **Email**: Set via `ADMIN_EMAIL` (default: `admin@datadynamo.com`).
+- **Password**: Configured via `ADMIN_PASSWORD` in the environment. Never commit passwords or `.env` files into source control.
+- **Role**: `admin` (grants access to the Admin console: Overview, Predictions, Users, Fairness, Model details, and Test lab).
 
 Applicants create their own account with **Register**.
 
@@ -126,7 +204,7 @@ docker compose up -d --force-recreate backend
 5. **Log out, log in as admin:** Overview (click a number card or donut slice to jump to filtered Predictions), Predictions (filters, CSV export), Fairness, Model details, Test lab (runs are saved under the admin account), and **View user site** to switch back.
 6. **Tests (optional):** run the backend tests (see below).
 
-**Design decisions worth pointing out:** reasons come from fixed rules and the AI only writes a short summary; gender is a model input by choice and the Fairness page shows its effect openly; the model is modest (see Known Limitations).
+**Design decisions worth pointing out:** reasons come from fixed rules and the AI only writes a short summary; gender is a model input by choice and the Fairness page shows its effect openly; the model is modest (see Honest Limits).
 
 **If something goes wrong:**
 
@@ -142,9 +220,11 @@ docker compose up -d --force-recreate backend
 
 ## Running Locally Without Docker
 
-### Prerequisites
-- Python 3.14 installed
-- Node.js 20 or newer & npm installed
+### Prerequisites & Datasets
+- **Python**: Python 3.14 installed.
+- **Node.js**: Node.js 20 or newer & npm installed.
+- **Dependencies**: Backend application requirements are in `backend/requirements.txt`. The root `requirements.txt` was renamed to `requirements-notebook.txt` for Jupyter notebook workflows.
+- **Dataset**: The `data\` folder is not included in the repository (it is gitignored). To run data preparation or notebooks, download the Home Credit Default Risk dataset files directly from Kaggle and place them into the `data\` folder.
 
 ### 1. Setup & Run Backend
 
@@ -174,7 +254,7 @@ The frontend will start at `http://localhost:5173`.
 
 ## Running Backend Tests
 
-In PowerShell from repository root (124 tests: endpoints, preprocessing, parity with the training notebook, SHAP consistency, risk levels, the retriever, and failure modes of the AI parts):
+In PowerShell from repository root (124 tests: endpoints, preprocessing, parity with the training notebook, SHAP consistency, risk levels, the retriever, and failure modes of the AI parts). Automated tests run directly via pytest and Python (the four `.ps1` test scripts no longer exist):
 
 ```powershell
 cd backend
@@ -193,6 +273,8 @@ To run end-to-end integration verification against a running server:
 & ".\.venv\Scripts\python.exe" verify_flow.py
 ```
 
+---
+
 ## Running Frontend Build Test
 
 In PowerShell from repository root:
@@ -206,15 +288,4 @@ npm run build
 npx oxlint src
 ```
 
-The frontend has no automated tests yet; it was checked by build, lint and manual walkthroughs.
-
----
-
-## Known Limitations
-
-- **The model is modest:** about 17 of every 100 flagged people really default, and about 42 of every 100 defaulters are caught (test ROC-AUC 0.697, PR-AUC 0.155). It demonstrates the full system and is not a lending tool.
-- **Small training sample** (9,000 rows). The website asks fewer details than the model uses (87 of 226 columns are filled with typical values), so real accuracy through the website is likely lower than the figures on the "How reliable?" page. This has not been measured separately.
-- **Gender is a model input** by choice. The flagged-rate ratio between genders is 0.516, below the common 0.8 rule of thumb, and the Fairness page shows it openly.
-- **Amounts are plain numbers:** the interface shows Indian rupees, but the dataset's currency is not stated and no conversion is done.
-- **Hindi and Marathi** answers are less polished than English, and reason names stay in English.
-- **AI rate limits** are kept in memory and work for a single running backend only.
+The frontend has no automated unit tests yet; it is checked by build, lint and manual walkthroughs.
