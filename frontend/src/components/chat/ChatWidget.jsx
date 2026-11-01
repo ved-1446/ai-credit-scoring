@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { api } from "../../api";
 import { useAuth } from "../../context/AuthContext";
 import { useChat } from "../../context/useChat";
-import { ROUTE_TOPICS } from "../../constants/chatTopics";
+import { ROUTE_TOPICS, getTopicLabel } from "../../constants/chatTopics";
 import { X, Send, HelpCircle, Info } from "lucide-react";
 
 export function ChatWidget({ predictionId: propPredictionId }) {
@@ -360,9 +360,9 @@ export function ChatWidget({ predictionId: propPredictionId }) {
                 <button
                   key={idx}
                   onClick={() => handleSend(null, topId)}
-                  className="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-brand-300 font-mono text-xs border border-slate-700 whitespace-nowrap transition-colors"
+                  className="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-brand-300 text-xs border border-slate-700 whitespace-nowrap transition-colors"
                 >
-                  {topId}
+                  {getTopicLabel(topId)}
                 </button>
               ))}
             </div>

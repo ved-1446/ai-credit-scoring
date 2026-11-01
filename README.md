@@ -34,7 +34,7 @@ Data Dynamo is a full-stack, machine-learning-powered credit scoring web applica
   - **MEDIUM**: 7.56%
   - **HIGH**: 18.28%
   - **VERY HIGH**: 30.88%
-- **Website form vs full model**: These metrics are evaluated from the full 226-column model. The website asks 27 questions and fills the remaining 87 columns with typical (median) values, so website-style precision and recall were never measured separately.
+- **Website form vs full model**: These metrics are evaluated from the full 226-column model. The form's 27 fields fill only some of the model's 226 columns; the rest are left blank and filled with typical (median) values, so website-style precision and recall were never measured separately.
 - **Gender disparity**: Gender is an explicit model input (`CODE_GENDER_F`, `CODE_GENDER_M`). The gender flagged-rate ratio is 0.516, which falls below the common 0.8 four-fifths fairness guideline; this disparity is shown openly on the admin Fairness page.
 - **In-memory rate limits**: API rate-limit counters are kept in process memory, supporting only a single server process.
 - **Unconverted amounts**: Monetary figures are uncalibrated plain numbers (displayed as rupees without currency conversion). Multilingual explanations (Hindi, Marathi) translate narrative text while technical reason names remain in English.
@@ -47,10 +47,10 @@ Data Dynamo is a full-stack, machine-learning-powered credit scoring web applica
 The frontend is a single-page React application built with Vite, Tailwind CSS, and Recharts. Applicants register, give consent, and fill in a multi-category application form (27 fields). A "Fill with a sample applicant" button fills the form for quick demos, and pressing Enter moves to the next field instead of submitting. The result page shows the estimated default risk on a colored risk scale, an AI-assisted summary (English, Hindi or Marathi), the main factors with a strength word, a donut chart of other factors that also counted, an interactive What-If simulator, and a downloadable PDF report (jsPDF). Every result is saved in a History page. A help assistant ("Ask for help") is available on every logged-in page, and the whole site has a light and dark theme.
 
 ### Backend
-The backend is a REST API built with FastAPI and Pydantic v2 conforming to the frozen `API_CONTRACT.md`. It has 16 endpoints covering JWT-based authentication, consent tracking, preprocessing, probability calculation, SHAP explanations, prediction history, the AI summary (`/explain`), the help assistant (`/chat`), model metrics, and admin monitoring.
+The backend is a REST API built with FastAPI and Pydantic v2 conforming to the frozen `API_CONTRACT.md`. It has 16 endpoints covering JWT-based authentication, consent tracking, preprocessing, risk score calculation, SHAP explanations, prediction history, the AI summary (`/explain`), the help assistant (`/chat`), model metrics, and admin monitoring.
 
 ### Model & Explainability
-The prediction engine uses an imbalanced-learn Pipeline containing a tuned XGBoost classifier trained with SMOTE. Preprocessing follows a frozen 7-step pipeline (categorical encoding, age/employment days mapping, ratio calculations, and median imputation). The form's 27 fields become 139 of the model's 226 columns; the other 87 are filled with typical (median) values. Local explainability is computed with SHAP TreeExplainer, linking the probability to the factors that moved it.
+The prediction engine uses an imbalanced-learn Pipeline containing a tuned XGBoost classifier trained with SMOTE. Preprocessing follows a frozen 7-step pipeline (categorical encoding, age/employment days mapping, ratio calculations, and median imputation). The form's 27 fields fill only some of the model's 226 columns; the rest are left blank and filled with typical (median) values. Local explainability is computed with SHAP TreeExplainer, linking the risk score to the factors that moved it.
 
 Risk levels are relative to the review cut-off (13.15%): Low is below half of it, Medium up to the cut-off, High up to twice the cut-off, Very high above that.
 
@@ -61,10 +61,75 @@ Risk levels are relative to the review cut-off (13.15%): Low is below half of it
 - Free-tier Gemini text may be used by Google to improve its products, so users are told not to type personal details.
 
 ### Database
-The application uses SQLAlchemy 2 for persistence, supporting SQLite for local development and PostgreSQL for containerized and cloud use. It has four tables: `users` (bcrypt password hashing and roles), `consents` (time-stamped consent records), `predictions` (inputs, probability, risk level and demographic fields for fairness tracking), and `explanations` (cached AI summaries).
+The application uses SQLAlchemy 2 for persistence, supporting SQLite for local development and PostgreSQL for containerized and cloud use. It has four tables: `users` (bcrypt password hashing and roles), `consents` (time-stamped consent records), `predictions` (inputs, risk score, risk level and demographic fields for fairness tracking), and `explanations` (cached AI summaries).
 
 ### Docker Architecture
 The containerized deployment consists of three services orchestrated via Docker Compose: a PostgreSQL 16 database with health checks, a Python 3.14-slim backend image bundling the ML artifacts and system libraries (`libgomp1`), and a multi-stage NGINX image serving the React build on port 3000 with client-side routing.
+
+---
+
+## Architecture & Technical Documentation
+
+For deeper technical implementation details, refer to the documentation:
+- **System Architecture & Data Flows**: Diagrams and schema relationships are in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
+- **API Reference**: Endpoint routes and authorization rules are detailed in [docs/API.md](docs/API.md).
+- **Model Card**: Machine learning specifications, benchmarks, fairness metrics, and operational boundaries are in [docs/MODEL_CARD.md](docs/MODEL_CARD.md).
+
+---
+
+## Project Layout
+
+```
+data-dynamo/
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.md
+│   │   └── feature_request.md
+│   ├── workflows/
+│   │   └── ci.yml
+│   └── pull_request_template.md
+├── artifacts/
+│   ├── encoder.joblib
+│   ├── imputer.joblib
+│   ├── model.joblib
+│   └── model_metadata.json
+├── backend/
+│   ├── app/
+│   │   ├── llm/
+│   │   ├── ml/
+│   │   ├── rag/
+│   │   └── routers/
+│   ├── tests/
+│   ├── Dockerfile
+│   ├── requirements.txt
+│   └── requirements-dev.txt
+├── docs/
+│   ├── API.md
+│   ├── ARCHITECTURE.md
+│   └── MODEL_CARD.md
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   ├── constants/
+│   │   ├── context/
+│   │   ├── pages/
+│   │   └── utils/
+│   ├── Dockerfile
+│   ├── index.html
+│   ├── package.json
+│   └── vite.config.js
+├── notebooks/
+│   └── 01_eda_recovered.ipynb
+├── scripts/
+├── docker-compose.yml
+├── requirements-notebook.txt
+├── CONTRIBUTING.md
+├── LICENSE
+├── README.md
+└── SECURITY.md
+```
 
 ---
 
@@ -121,7 +186,7 @@ All environment variable names configured for the application are described belo
 
 ---
 
-## Default Admin Credentials
+## Admin Account
 
 An administrator user is automatically seeded on backend startup:
 - **Email**: Set via `ADMIN_EMAIL` (default: `admin@datadynamo.com`).
@@ -289,3 +354,28 @@ npx oxlint src
 ```
 
 The frontend has no automated unit tests yet; it is checked by build, lint and manual walkthroughs.
+
+---
+
+## Security Notes
+
+- **Authentication & Sessions**: Direct bcrypt password hashing and signed HS256 JWT access tokens.
+- **Informed Consent**: Explicit user consent is mandatory before running credit scoring evaluations.
+- **Role-Based Access Control**: Administrative endpoints (`/admin/*`) are strictly enforced server-side.
+- **Environment Isolation**: Secrets, credentials, and API keys are stored in environment variables; never commit `.env` files.
+- **AI Privacy**: Safe fact summaries send only categorical risk bands and plain factor names to Gemini. Chat questions are transmitted to Gemini, where free-tier text may be used by Google to improve products. Users are warned never to enter personal details.
+- **In-Memory Rate Limiting**: Throttling counters for LLM endpoints operate in server memory for single-process protection.
+
+For vulnerability reporting procedures, refer to [SECURITY.md](SECURITY.md).
+
+---
+
+## Contributing
+
+Contributions, bug reports, and suggestions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) for branch guidelines, commit conventions, and pre-PR verification steps.
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE). The license covers this repository's code only, not the Kaggle Home Credit dataset or third-party APIs and libraries.

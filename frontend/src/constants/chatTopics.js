@@ -1,6 +1,39 @@
 /**
- * chatTopics.js — Page-specific suggested topics and questions mapping to backend help note IDs.
+ * chatTopics.js — Page-specific suggested topics and questions mapping to backend help note IDs,
+ * plus human-readable labels for help note suggestion chips.
  */
+
+export const NOTE_TOPIC_LABELS = {
+  credit_report_checks: "Credit Report Checks",
+  disagree_with_result: "What to Do If You Disagree",
+  educational_demo_disclaimer: "Educational Demonstration and Disclaimers",
+  employment_and_age: "Employment and Age",
+  external_credit_scores: "External Credit Scores",
+  fairness_and_gender: "Fairness and Use of Demographic Inputs",
+  family_and_home: "Family, Housing, and Assets",
+  history_page: "Application History Page",
+  how_explanations_work: "How Explanations Are Generated",
+  income_and_loan: "Income, Loan Amount, and Annuity",
+  model_limits_and_honesty: "Model Performance and Honest Limits",
+  model_technical_details: "Model Technical Details and Metrics",
+  optional_fields_blank: "Optional Fields and Blank Answers",
+  percentage_meaning: "What the Percentage Means",
+  privacy_and_consent: "Privacy, Consent, and Google Sharing",
+  reasons_raised_lowered: "Why Factors Raised or Lowered the Estimate",
+  result_page_and_whatif: "Result Page and What-If Simulation",
+  risk_levels: "Understanding Risk Levels",
+  scoring_mechanics: "How Scoring Works",
+  technical_terms_explained: "Technical Terms Explained",
+};
+
+/**
+ * Returns a human-readable label for a note topic id.
+ * If the id is not in the map, falls back to the id with underscores replaced by spaces.
+ */
+export const getTopicLabel = (topicId) => {
+  if (!topicId) return "";
+  return NOTE_TOPIC_LABELS[topicId] || topicId.replace(/_/g, " ");
+};
 
 export const ROUTE_TOPICS = {
   Consent: [

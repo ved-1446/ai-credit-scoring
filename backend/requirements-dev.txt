@@ -1,0 +1,4 @@
+# Development and testing requirements
+# Note: pytest and httpx are already present in backend/requirements.txt and left out here
+pyflakes
+
