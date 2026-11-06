@@ -77,6 +77,18 @@ For deeper technical implementation details, refer to the documentation:
 
 ---
 
+## Architecture & Diagrams
+
+Three diagrams explain how the system works. They are standalone `.html` files that open in any browser, with no install or server needed.
+
+- **System architecture** — the 10 components, trust boundaries, and the highlighted `POST /predict` request path: [docs/diagrams/data-dynamo-architecture.html](docs/diagrams/data-dynamo-architecture.html)
+- **Data flow** — where data enters, how it is processed and stored, what consumes it, and where personal data and credentials cross a trust boundary: [docs/diagrams/data-dynamo-dataflow.html](docs/diagrams/data-dynamo-dataflow.html)
+- **Sequence** — the step-by-step "submit a credit application" call chain, including the failure paths: [docs/diagrams/data-dynamo-sequence.html](docs/diagrams/data-dynamo-sequence.html)
+
+**Main components:** Applicant Browser, React SPA, FastAPI Backend, Auth + Consent, Scoring Engine (XGBoost + SHAP), Model Artifacts, SQL Database, Explain & Help (with Help Notes), and the optional Gemini API.
+
+---
+
 ## Project Layout
 
 ```

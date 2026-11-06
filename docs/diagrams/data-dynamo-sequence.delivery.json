@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "e9e991e1-a334-4a33-a478-4c3c43f79d93",
+  "status": "current",
+  "command": "deliver",
+  "type": "sequence",
+  "input": "C:\\Dev\\data-dynamo\\.archify\\sequence-data-dynamo-20261107-011950\\candidate.json",
+  "output": "C:\\Dev\\data-dynamo\\docs\\diagrams\\data-dynamo-sequence.html",
+  "specification": {
+    "sha256": "6191bdb15dfa6dc99dae272e6cc3cc38edebfe2d59fa2dc4618cbe8f129ee5ed",
+    "bytes": 7316
+  },
+  "artifact": {
+    "sha256": "2c7fc7010395f03593ec18d0a4702072a6c965b729e703eacd2c9358c756003a",
+    "bytes": 845435
+  }
+}
