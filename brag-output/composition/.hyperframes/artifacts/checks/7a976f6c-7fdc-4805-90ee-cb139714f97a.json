@@ -1,0 +1,602 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 6,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "timeline_track_too_dense",
+        "severity": "warning",
+        "message": "Track 0 has 5 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Dev\\data-dynamo\\brag-output\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"s1\"> is a timeline element that contains nested <div id=\"g1\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s1",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Dev\\data-dynamo\\brag-output\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"s1\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"s2\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s2",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Dev\\data-dynamo\\brag-output\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"s2\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"s3\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s3",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Dev\\data-dynamo\\brag-output\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"s3\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"s4\"> is a timeline element that contains nested <div id=\"k4\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s4",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Dev\\data-dynamo\\brag-output\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"s4\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"s5\"> is a timeline element that contains nested <div id=\"g5\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s5",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Dev\\data-dynamo\\brag-output\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"s5\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      }
+    ],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 8,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "clip_media_fit",
+        "severity": "warning",
+        "message": "Audio \"clk1\" is 0.01s but its slot (data-duration) is 0.30s — the slot is shortened to the media length when rendered. Set data-duration to ~0.01s if that isn't intended.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "30",
+          "data-width": "1920",
+          "data-height": "1080"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "time": 0
+      },
+      {
+        "code": "clip_media_fit",
+        "severity": "warning",
+        "message": "Audio \"clk2\" is 0.01s but its slot (data-duration) is 0.30s — the slot is shortened to the media length when rendered. Set data-duration to ~0.01s if that isn't intended.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "30",
+          "data-width": "1920",
+          "data-height": "1080"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "time": 0
+      },
+      {
+        "code": "clip_media_fit",
+        "severity": "warning",
+        "message": "Audio \"r1\" is 0.06s but its slot (data-duration) is 0.40s — the slot is shortened to the media length when rendered. Set data-duration to ~0.06s if that isn't intended.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "30",
+          "data-width": "1920",
+          "data-height": "1080"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "time": 0
+      },
+      {
+        "code": "clip_media_fit",
+        "severity": "warning",
+        "message": "Audio \"r2\" is 0.06s but its slot (data-duration) is 0.40s — the slot is shortened to the media length when rendered. Set data-duration to ~0.06s if that isn't intended.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "30",
+          "data-width": "1920",
+          "data-height": "1080"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "time": 0
+      },
+      {
+        "code": "clip_media_fit",
+        "severity": "warning",
+        "message": "Audio \"r3\" is 0.06s but its slot (data-duration) is 0.40s — the slot is shortened to the media length when rendered. Set data-duration to ~0.06s if that isn't intended.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "30",
+          "data-width": "1920",
+          "data-height": "1080"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "time": 0
+      },
+      {
+        "code": "clip_media_fit",
+        "severity": "warning",
+        "message": "Audio \"r4\" is 0.06s but its slot (data-duration) is 0.40s — the slot is shortened to the media length when rendered. Set data-duration to ~0.06s if that isn't intended.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "30",
+          "data-width": "1920",
+          "data-height": "1080"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "time": 0
+      },
+      {
+        "code": "clip_media_fit",
+        "severity": "warning",
+        "message": "Audio \"imp\" is 0.18s but its slot (data-duration) is 0.50s — the slot is shortened to the media length when rendered. Set data-duration to ~0.18s if that isn't intended.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "30",
+          "data-width": "1920",
+          "data-height": "1080"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "time": 0
+      },
+      {
+        "code": "clip_media_fit",
+        "severity": "warning",
+        "message": "Audio \"bong\" is 0.12s but its slot (data-duration) is 0.50s — the slot is shortened to the media length when rendered. Set data-duration to ~0.12s if that isn't intended.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "30",
+          "data-width": "1920",
+          "data-height": "1080"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "time": 0
+      }
+    ]
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "duration": 30,
+    "samples": [
+      1.667,
+      5,
+      8.333,
+      11.667,
+      15,
+      18.333,
+      21.667,
+      25,
+      28.333
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 0,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      1.667,
+      8.333,
+      15,
+      21.667,
+      28.333
+    ],
+    "checked": 59,
+    "passed": 59
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 2,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "first_frame_empty",
+        "severity": "warning",
+        "message": "Frame 0 shows only the background, and the first frame is the thumbnail on social players: have the title or key image already on screen at 0 s instead of entering from nothing; see references/review.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 25 text elements stay under it for 0.5 s or more, the smallest \"Your risk\" at 20 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "Your risk",
+        "selector": "#marker > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 517.72,
+          "y": 262.69,
+          "width": 108,
+          "height": 26
+        },
+        "time": 13.125,
+        "times": [
+          6.125,
+          6.125,
+          9.375,
+          12.25,
+          12.25,
+          12.25,
+          12.25,
+          12.25,
+          12.25,
+          12.25,
+          12.25,
+          12.25,
+          12.25,
+          12.5,
+          13.125,
+          13.5,
+          14.125,
+          15.125,
+          16.125,
+          17.125,
+          23.625,
+          23.75,
+          24,
+          24.125,
+          24.375
+        ],
+        "fontPx": 20,
+        "floorPx": 28,
+        "seconds": 6.75,
+        "elements": [
+          {
+            "selector": "#marker > div:nth-of-type(1)",
+            "text": "Your risk",
+            "fontPx": 20,
+            "time": 13.125,
+            "seconds": 6.75
+          },
+          {
+            "selector": "#submit",
+            "text": "Submit & Evaluate Risk",
+            "fontPx": 24.99,
+            "time": 9.375,
+            "seconds": 2.5
+          },
+          {
+            "selector": "#fill",
+            "text": "Fill with a sample applicant",
+            "fontPx": 25.24,
+            "time": 6.125,
+            "seconds": 5.75
+          },
+          {
+            "selector": "#fc > div:nth-of-type(1)",
+            "text": "27 fields",
+            "fontPx": 26,
+            "time": 6.125,
+            "seconds": 5.75
+          },
+          {
+            "selector": "#scalepanel > div:nth-of-type(1)",
+            "text": "Risk continuum",
+            "fontPx": 26,
+            "time": 12.25,
+            "seconds": 7.625
+          },
+          {
+            "selector": "#scalepanel > div:nth-of-type(2)",
+            "text": "Review cut-off:",
+            "fontPx": 26,
+            "time": 12.25,
+            "seconds": 7.625
+          },
+          {
+            "selector": "div.abs.mono > span:nth-of-type(1)",
+            "text": "13.15%",
+            "fontPx": 26,
+            "time": 12.25,
+            "seconds": 7.625
+          },
+          {
+            "selector": "#scalepanel > div:nth-of-type(6)",
+            "text": "Low",
+            "fontPx": 26,
+            "time": 12.25,
+            "seconds": 7.625
+          },
+          {
+            "selector": "#scalepanel > div:nth-of-type(7)",
+            "text": "Medium",
+            "fontPx": 26,
+            "time": 12.25,
+            "seconds": 7.625
+          },
+          {
+            "selector": "#scalepanel > div:nth-of-type(8)",
+            "text": "High",
+            "fontPx": 26,
+            "time": 12.25,
+            "seconds": 7.625
+          },
+          {
+            "selector": "#scalepanel > div:nth-of-type(9)",
+            "text": "Very high",
+            "fontPx": 26,
+            "time": 12.25,
+            "seconds": 7.625
+          },
+          {
+            "selector": "#scalepanel > div:nth-of-type(10)",
+            "text": "0%",
+            "fontPx": 26,
+            "time": 12.25,
+            "seconds": 7.625
+          },
+          {
+            "selector": "#scalepanel > div:nth-of-type(11)",
+            "text": "Cut-off (13.15%)",
+            "fontPx": 26,
+            "time": 12.25,
+            "seconds": 7.625
+          },
+          {
+            "selector": "#scalepanel > div:nth-of-type(12)",
+            "text": "40%",
+            "fontPx": 26,
+            "time": 12.25,
+            "seconds": 7.625
+          },
+          {
+            "selector": "#ill",
+            "text": "Illustrative sample result",
+            "fontPx": 26,
+            "time": 12.5,
+            "seconds": 7.375
+          },
+          {
+            "selector": "#factors > div:nth-of-type(1)",
+            "text": "Main factors",
+            "fontPx": 26,
+            "time": 13.5,
+            "seconds": 6.375
+          },
+          {
+            "selector": "#fr1 > span:nth-of-type(2)",
+            "text": "▼ lowers risk",
+            "fontPx": 26,
+            "time": 14.125,
+            "seconds": 5.75
+          },
+          {
+            "selector": "#fr2 > span:nth-of-type(2)",
+            "text": "▼ lowers risk",
+            "fontPx": 26,
+            "time": 15.125,
+            "seconds": 4.75
+          },
+          {
+            "selector": "#fr3 > span:nth-of-type(2)",
+            "text": "▲ raises risk",
+            "fontPx": 26,
+            "time": 16.125,
+            "seconds": 3.75
+          },
+          {
+            "selector": "#fr4 > span:nth-of-type(2)",
+            "text": "▲ raises risk",
+            "fontPx": 26,
+            "time": 17.125,
+            "seconds": 2.75
+          },
+          {
+            "selector": "#bandlabel",
+            "text": "Measured default rate per risk band (validation sample)",
+            "fontPx": 26,
+            "time": 23.625,
+            "seconds": 2.25
+          },
+          {
+            "selector": "#b1 > div:nth-of-type(2)",
+            "text": "Low",
+            "fontPx": 26,
+            "time": 23.75,
+            "seconds": 2.125
+          },
+          {
+            "selector": "#b2 > div:nth-of-type(2)",
+            "text": "Medium",
+            "fontPx": 26,
+            "time": 24,
+            "seconds": 1.875
+          },
+          {
+            "selector": "#b3 > div:nth-of-type(2)",
+            "text": "High",
+            "fontPx": 26,
+            "time": 24.125,
+            "seconds": 1.75
+          },
+          {
+            "selector": "#b4 > div:nth-of-type(2)",
+            "text": "Very high",
+            "fontPx": 26,
+            "time": 24.375,
+            "seconds": 1.5
+          }
+        ]
+      }
+    ],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 240
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  }
+}

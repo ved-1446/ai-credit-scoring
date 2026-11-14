@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "1d7a83af-b779-496e-8f33-9a8153462b14",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "C:\\Dev\\data-dynamo\\.archify\\architecture-data-dynamo-20261107-011950\\candidate.json",
+  "output": "C:\\Dev\\data-dynamo\\docs\\diagrams\\data-dynamo-architecture.html",
+  "specification": {
+    "sha256": "2b1b68bd2f9ff1a2c78759af48d273c963b5e571c5d52a99433704f7be99d9b8",
+    "bytes": 6819
+  },
+  "artifact": {
+    "sha256": "2a627f89655e62bdf78de1e0f33a427f2b1e214b56860ab4a4bb74cba664c738",
+    "bytes": 856074
+  }
+}

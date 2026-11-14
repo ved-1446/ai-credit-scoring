@@ -15,6 +15,26 @@ Data Dynamo is a full-stack, machine-learning-powered credit scoring web applica
 
 ---
 
+## Demo Video
+
+A 30-second launch video (1920x1080, with music) is in [brag-output/brag.mp4](brag-output/brag.mp4). Its plan and share caption are in [brag-output/brag-plan.md](brag-output/brag-plan.md) and [brag-output/share-copy.txt](brag-output/share-copy.txt). The risk-result scene in the video is an illustrative mock-up, not real model output.
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Frontend | React 19, Vite, Tailwind CSS 3, React Router 7, Recharts, jsPDF, lucide-react |
+| Backend | Python 3.14, FastAPI, Pydantic v2, SQLAlchemy 2, PyJWT, bcrypt |
+| ML | XGBoost, imbalanced-learn (SMOTE), scikit-learn, pandas, numpy, SHAP, joblib |
+| AI text | Google Gemini via `google-genai` (optional, with template fallback), TF-IDF retrieval for help notes |
+| Database | SQLite (local), PostgreSQL 16 (Docker and cloud) |
+| Packaging and CI | Docker Compose, NGINX (serves the frontend build), GitHub Actions |
+| Quality checks | pytest, pyflakes, oxlint |
+
+---
+
 ## How AI Is Used
 
 - **Explanation summaries and help chat**: Explanation summaries (`/explain`) and the interactive help assistant (`/chat`) use Google's Gemini API (default model: `gemini-3.5-flash-lite`, configurable via `GEMINI_MODEL`).
@@ -79,9 +99,11 @@ For deeper technical implementation details, refer to the documentation:
 
 ## Architecture & Diagrams
 
-Three diagrams explain how the system works. They are standalone `.html` files that open in any browser, with no install or server needed.
+Five diagrams explain how the system works. They are standalone `.html` files that open in any browser, with no install or server needed.
 
 - **System architecture** — the 10 components, trust boundaries, and the highlighted `POST /predict` request path: [docs/diagrams/data-dynamo-architecture.html](docs/diagrams/data-dynamo-architecture.html)
+- **Runtime architecture** — [docs/diagrams/data-dynamo-runtime-architecture.html](docs/diagrams/data-dynamo-runtime-architecture.html)
+- **System design** — [docs/diagrams/data-dynamo-system-design.html](docs/diagrams/data-dynamo-system-design.html)
 - **Data flow** — where data enters, how it is processed and stored, what consumes it, and where personal data and credentials cross a trust boundary: [docs/diagrams/data-dynamo-dataflow.html](docs/diagrams/data-dynamo-dataflow.html)
 - **Sequence** — the step-by-step "submit a credit application" call chain, including the failure paths: [docs/diagrams/data-dynamo-sequence.html](docs/diagrams/data-dynamo-sequence.html)
 
@@ -101,10 +123,11 @@ data-dynamo/
 │   │   └── ci.yml
 │   └── pull_request_template.md
 ├── artifacts/
+│   ├── credit_risk_pipeline.joblib
 │   ├── encoder.joblib
 │   ├── imputer.joblib
-│   ├── model.joblib
-│   └── model_metadata.json
+│   ├── model_metadata.json
+│   └── model_metadata.backup.json
 ├── backend/
 │   ├── app/
 │   │   ├── llm/
@@ -114,11 +137,20 @@ data-dynamo/
 │   ├── tests/
 │   ├── Dockerfile
 │   ├── requirements.txt
-│   └── requirements-dev.txt
+│   ├── requirements-dev.txt
+│   └── verify_flow.py
+├── brag-output/
+│   ├── brag.mp4
+│   ├── brag.jpg
+│   ├── brag-plan.md
+│   ├── composition-brief.md
+│   ├── share-copy.txt
+│   └── composition/
 ├── docs/
 │   ├── API.md
 │   ├── ARCHITECTURE.md
-│   └── MODEL_CARD.md
+│   ├── MODEL_CARD.md
+│   └── diagrams/
 ├── frontend/
 │   ├── public/
 │   ├── src/
@@ -130,11 +162,14 @@ data-dynamo/
 │   │   └── utils/
 │   ├── Dockerfile
 │   ├── index.html
+│   ├── nginx.conf
 │   ├── package.json
+│   ├── vercel.json
 │   └── vite.config.js
 ├── notebooks/
 │   └── 01_eda_recovered.ipynb
-├── scripts/
+├── API_CONTRACT.md
+├── PROGRESS.md
 ├── docker-compose.yml
 ├── requirements-notebook.txt
 ├── CONTRIBUTING.md
@@ -366,6 +401,10 @@ npx oxlint src
 ```
 
 The frontend has no automated unit tests yet; it is checked by build, lint and manual walkthroughs.
+
+### Continuous Integration
+
+`.github/workflows/ci.yml` runs on pushes and pull requests to `main`: pyflakes and pytest for the backend (Python 3.14), `npm ci`, `npm run build` and `oxlint` for the frontend (Node.js 20), and a Docker build of both images.
 
 ---
 

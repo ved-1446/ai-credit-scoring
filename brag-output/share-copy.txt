@@ -1,0 +1,2 @@
+Introducing Data Dynamo: an AI credit-scoring demo that shows the reasons behind every risk score, and publishes its own weak spots (test ROC-AUC 0.6974) instead of hiding them.
+Built with React, FastAPI, XGBoost and SHAP. Educational demo, not a real lending decision.

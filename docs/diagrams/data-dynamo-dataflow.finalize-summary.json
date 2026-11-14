@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "dataflow",
+  "quality": "showcase",
+  "specification": {
+    "path": "C:\\Dev\\data-dynamo\\.archify\\dataflow-data-dynamo-20261107-011950\\candidate.json",
+    "sha256": "9127dd0bb52a2723602d4fdb0594cf331f3f2701a86423f280df50bf68c1fe4c",
+    "bytes": 9595
+  },
+  "artifact": {
+    "path": "C:\\Dev\\data-dynamo\\docs\\diagrams\\data-dynamo-dataflow.html",
+    "sha256": "8be162dcc784755a9b7aafc9fb5510b4c6f551adb096629bfd86dc37486d434e",
+    "bytes": 849459
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "C:\\Dev\\data-dynamo\\docs\\diagrams\\data-dynamo-dataflow.finalize.json",
+    "summaryReceipt": "C:\\Dev\\data-dynamo\\docs\\diagrams\\data-dynamo-dataflow.finalize-summary.json",
+    "browserCheckReceipt": "C:\\Dev\\data-dynamo\\docs\\diagrams\\data-dynamo-dataflow.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 3014,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

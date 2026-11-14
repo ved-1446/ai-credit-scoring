@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Fraunces"; src: url("assets/fonts/fraunces-latin-wght-normal.woff2") format("woff2"); font-weight: 100 900; }
+      @font-face { font-family: "DM Sans"; src: url("assets/fonts/dm-sans-latin-wght-normal.woff2") format("woff2"); font-weight: 100 1000; }
+      @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/jetbrains-mono-latin-500-normal.woff2") format("woff2"); font-weight: 500; }
+      :root {
+        --ground: #161917;
+        --card: #1f2320;
+        --line: #2c312d;
+        --ink: #f5f6f1;
+        --muted: #a3aaa3;
+        --teal: #5ec4b4;
+        --teal-deep: #148074;
+        --terra: #e08a66;
+        --low: #4ac58e; --med: #e6be46; --high: #f08c46; --vhigh: #eb5a64;
+        --font-display: "Fraunces", Georgia, serif;
+        --font-body: "DM Sans", system-ui, sans-serif;
+        --font-mono: "JetBrains Mono", monospace;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: var(--ground); }
+      #root { position: relative; width: 1920px; height: 1080px; background: var(--ground); font-family: var(--font-body); color: var(--ink); overflow: hidden; }
+      .scene { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; opacity: 0; }
+      .glow { position: absolute; border-radius: 50%; background: radial-gradient(circle, rgba(94,196,180,0.22) 0%, rgba(94,196,180,0) 70%); }
+      .mono { font-family: var(--font-mono); font-weight: 500; text-transform: uppercase; letter-spacing: 0.18em; }
+      .kicker { font-size: 28px; color: var(--teal); }
+      .abs { position: absolute; }
+
+      /* Scene 1 */
+      #title { position: absolute; left: 140px; top: 400px; font-family: var(--font-display); font-weight: 400; font-size: 112px; letter-spacing: -0.02em; line-height: 1; white-space: nowrap; }
+      #title .c { position: relative; display: inline-block; opacity: 0; }
+      #title .cur { position: absolute; right: -8px; top: 6%; width: 6px; height: 88%; background: var(--teal); opacity: 0; }
+      #sub { left: 140px; top: 560px; width: 1180px; font-size: 40px; line-height: 1.4; color: #d7dbd3; }
+      #disc { left: 140px; top: 700px; font-family: var(--font-mono); font-size: 28px; color: var(--muted); border-left: 3px solid var(--line); padding-left: 18px; }
+
+      /* Scene 2 */
+      .step { position: absolute; left: 140px; width: 520px; border-top: 2px solid var(--line); padding-top: 22px; opacity: 0.35; }
+      .step .n { font-family: var(--font-mono); font-size: 28px; color: var(--teal); font-weight: 500; }
+      .step h3 { font-family: var(--font-display); font-weight: 500; font-size: 46px; margin-top: 10px; }
+      .formcard { position: absolute; left: 820px; top: 150px; width: 960px; height: 780px; background: var(--card); border: 2px solid var(--line); border-radius: 22px; padding: 44px 52px; }
+      .formcard h2 { font-family: var(--font-display); font-weight: 500; font-size: 46px; }
+      .chip { display: inline-block; font-family: var(--font-mono); font-size: 26px; color: var(--teal); border: 2px solid var(--teal-deep); border-radius: 40px; padding: 6px 18px; letter-spacing: 0.08em; }
+      .btn { position: absolute; border-radius: 12px; font-size: 26px; font-weight: 600; padding: 16px 28px; }
+      .btn.ghost { color: var(--teal); border: 2px solid var(--teal-deep); background: transparent; }
+      .btn.solid { color: #fff; background: var(--teal-deep); }
+      .frow { position: absolute; left: 52px; right: 52px; height: 72px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--line); font-size: 28px; opacity: 0; }
+      .frow .l { color: var(--muted); }
+      .frow .v { font-family: var(--font-mono); font-size: 28px; color: var(--ink); }
+      #cursor { position: absolute; left: 0; top: 0; width: 44px; height: 44px; opacity: 0; }
+
+      /* Scene 3 */
+      .h2 { font-family: var(--font-display); font-weight: 500; font-size: 64px; letter-spacing: -0.01em; }
+      .panel { position: absolute; background: var(--card); border: 2px solid var(--line); border-radius: 22px; }
+      #scale-track { position: absolute; left: 60px; top: 150px; width: 1560px; height: 28px; border-radius: 14px; overflow: hidden; display: flex; }
+      #scale-track div { height: 100%; opacity: 0.88; }
+      .blabel { position: absolute; top: 196px; font-family: var(--font-mono); font-size: 26px; color: var(--muted); }
+      .frow3 { position: absolute; left: 44px; right: 44px; height: 108px; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid var(--line); opacity: 0; }
+      .frow3 .name { font-size: 38px; font-weight: 600; width: 520px; }
+      .frow3 .dir { font-family: var(--font-mono); font-size: 26px; letter-spacing: 0.06em; width: 280px; }
+      .frow3 .bar { height: 14px; border-radius: 7px; }
+      .frow3 .str { font-size: 28px; color: var(--muted); width: 150px; text-align: right; }
+      .feat { position: absolute; left: 1260px; width: 520px; height: 150px; padding: 28px 32px; opacity: 0; }
+      .feat b { display: block; font-family: var(--font-display); font-weight: 500; font-size: 38px; }
+      .feat span { display: block; margin-top: 8px; font-size: 28px; color: var(--muted); }
+
+      /* Scene 4 */
+      .stat { position: absolute; top: 470px; width: 520px; height: 270px; padding: 36px 38px; opacity: 0; }
+      .stat .big { font-family: var(--font-display); font-weight: 500; font-size: 104px; line-height: 1; }
+      .stat .lbl { margin-top: 18px; font-size: 30px; color: var(--muted); line-height: 1.3; }
+      .band { position: absolute; top: 860px; width: 380px; opacity: 0; border-top: 6px solid; padding-top: 18px; }
+      .band .p { font-family: var(--font-display); font-size: 56px; font-weight: 500; }
+      .band .t { font-family: var(--font-mono); font-size: 26px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; }
+
+      /* Scene 5 */
+      #logo { left: 0; width: 1920px; top: 340px; text-align: center; font-family: var(--font-display); font-weight: 400; font-size: 168px; letter-spacing: -0.03em; }
+      #rule { left: 810px; top: 560px; width: 300px; height: 4px; background: var(--teal); transform-origin: 50% 50%; }
+      #disc5 { left: 0; width: 1920px; top: 620px; text-align: center; font-size: 36px; color: #d7dbd3; }
+      #url { left: 0; width: 1920px; top: 700px; text-align: center; font-family: var(--font-mono); font-size: 32px; color: var(--teal); letter-spacing: 0.06em; }
+      #fadeout { position: absolute; inset: 0; background: var(--ground); opacity: 0; z-index: 50; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1920" data-height="1080">
+
+      <!-- ===== Scene 1: hook ===== -->
+      <div id="s1" class="scene clip" data-start="0" data-duration="6.1" data-track-index="0">
+        <div id="g1" class="glow" style="left:-300px; top:-100px; width:1400px; height:1400px;"></div>
+        <div id="k1" class="abs mono kicker" style="left:140px; top:320px;">Data Dynamo / Simulation Engine</div>
+        <div id="title"></div>
+        <p id="sub" class="abs">Transparent, machine-learning powered credit risk evaluation.</p>
+        <div id="disc" class="abs">Educational demo. Not a real lending decision.</div>
+      </div>
+
+      <!-- ===== Scene 2: flow ===== -->
+      <div id="s2" class="scene clip" data-start="5.5" data-duration="6.6" data-track-index="0">
+        <div class="glow" style="left:-500px; top:300px; width:1300px; height:1300px;"></div>
+        <div id="st1" class="step" style="top:230px;"><div class="n">01</div><h3>Agree to data use</h3></div>
+        <div id="st2" class="step" style="top:430px;"><div class="n">02</div><h3>Fill in application</h3></div>
+        <div id="st3" class="step" style="top:630px;"><div class="n">03</div><h3>See factors &amp; risk</h3></div>
+        <div class="formcard" id="fc">
+          <h2>Your application</h2>
+          <div class="chip abs" style="right:52px; top:50px;">27 fields</div>
+          <div id="fill" class="btn ghost" style="left:52px; top:128px;">Fill with a sample applicant</div>
+          <div class="frow" style="top:236px;"><span class="l">Age</span><span class="v">31</span></div>
+          <div class="frow" style="top:308px;"><span class="l">Annual income</span><span class="v">160,000</span></div>
+          <div class="frow" style="top:380px;"><span class="l">Loan amount</span><span class="v">450,000</span></div>
+          <div class="frow" style="top:452px;"><span class="l">Annual repayment</span><span class="v">24,000</span></div>
+          <div class="frow" style="top:524px;"><span class="l">Years employed</span><span class="v">4.5</span></div>
+          <div class="frow" style="top:596px;"><span class="l">Housing type</span><span class="v">Rented apartment</span></div>
+          <div id="submit" class="btn solid" style="left:52px; top:690px; opacity:0.35;">Submit &amp; Evaluate Risk</div>
+        </div>
+        <svg id="cursor" viewBox="0 0 24 24"><path d="M3 2 L3 19 L8 14.5 L11.5 22 L14.5 20.6 L11 13.2 L18 13 Z" fill="#f5f6f1" stroke="#161917" stroke-width="1.5" stroke-linejoin="round"/></svg>
+      </div>
+
+      <!-- ===== Scene 3: result ===== -->
+      <div id="s3" class="scene clip" data-start="11.5" data-duration="8.6" data-track-index="0">
+        <div class="glow" style="left:900px; top:-500px; width:1400px; height:1400px;"></div>
+        <div id="h3" class="abs h2" style="left:140px; top:70px;">Estimated default risk</div>
+        <div id="ill" class="abs chip" style="right:140px; top:90px; color:#a3aaa3; border-color:#2c312d;">Illustrative sample result</div>
+        <div class="panel" id="scalepanel" style="left:140px; top:190px; width:1680px; height:280px;">
+          <div class="abs mono" style="left:60px; top:34px; font-size:26px; color:#a3aaa3;">Risk continuum</div>
+          <div class="abs mono" style="right:60px; top:34px; font-size:26px; color:#a3aaa3;">Review cut-off: <span style="color:#f5f6f1;">13.15%</span></div>
+          <div id="scale-track">
+            <div style="width:16.4%; background:#4ac58e;"></div>
+            <div style="width:16.4%; background:#e6be46;"></div>
+            <div style="width:32.9%; background:#f08c46;"></div>
+            <div style="width:34.3%; background:#eb5a64;"></div>
+          </div>
+          <div id="cutoff" class="abs" style="left:calc(60px + 1560px * 0.329 - 2px); top:136px; width:4px; height:50px; background:#f5f6f1;"></div>
+          <div id="marker" class="abs" style="left:calc(60px + 1560px * 0.237); top:92px; width:0;">
+            <div style="position:absolute; left:-70px; top:-8px; width:140px; text-align:center; font-family:var(--font-mono); font-size:20px; color:#161917; background:#f5f6f1; border-radius:8px; padding:6px 0;">Your risk</div>
+            <div style="position:absolute; left:-2px; top:34px; width:4px; height:52px; background:#f5f6f1;"></div>
+          </div>
+          <div class="blabel" style="left:60px;">Low</div>
+          <div class="blabel" style="left:calc(60px + 1560px * 0.164);">Medium</div>
+          <div class="blabel" style="left:calc(60px + 1560px * 0.329 + 12px);">High</div>
+          <div class="blabel" style="left:calc(60px + 1560px * 0.658);">Very high</div>
+          <div class="abs mono" style="left:60px; top:236px; font-size:26px; color:#a3aaa3;">0%</div>
+          <div class="abs mono" style="left:calc(60px + 1560px * 0.329 - 240px); top:236px; font-size:26px; color:#f5f6f1; width:480px; text-align:center;">Cut-off (13.15%)</div>
+          <div class="abs mono" style="right:60px; top:236px; font-size:26px; color:#a3aaa3;">40%</div>
+        </div>
+
+        <div class="panel" id="factors" style="left:140px; top:510px; width:1080px; height:510px;">
+          <div class="abs mono" style="left:44px; top:30px; font-size:26px; color:#a3aaa3;">Main factors</div>
+          <div id="fr1" class="frow3" style="top:84px;"><span class="name">External credit score 2</span><span class="dir" style="color:#46b6a0;">&#9660; lowers risk</span><span class="bar" style="width:200px; background:#46b6a0;"></span><span class="str">Strong</span></div>
+          <div id="fr2" class="frow3" style="top:192px;"><span class="name">External credit score 3</span><span class="dir" style="color:#46b6a0;">&#9660; lowers risk</span><span class="bar" style="width:110px; background:#46b6a0;"></span><span class="str">Moderate</span></div>
+          <div id="fr3" class="frow3" style="top:300px;"><span class="name">Loan amount</span><span class="dir" style="color:#e87664;">&#9650; raises risk</span><span class="bar" style="width:170px; background:#e87664;"></span><span class="str">Strong</span></div>
+          <div id="fr4" class="frow3" style="top:408px; border-bottom:none;"><span class="name">Annual repayment</span><span class="dir" style="color:#e87664;">&#9650; raises risk</span><span class="bar" style="width:90px; background:#e87664;"></span><span class="str">Moderate</span></div>
+        </div>
+
+        <div id="f1" class="feat panel" style="top:510px;"><b>AI-assisted summary</b><span>English, Hindi or Marathi</span></div>
+        <div id="f2" class="feat panel" style="top:690px;"><b>Interactive What-If</b><span>Change the loan, see the risk move</span></div>
+        <div id="f3" class="feat panel" style="top:870px; height:150px;"><b>PDF report</b><span>Download it from the result page</span></div>
+      </div>
+
+      <!-- ===== Scene 4: honesty ===== -->
+      <div id="s4" class="scene clip" data-start="19.5" data-duration="6.6" data-track-index="0">
+        <div id="k4" class="abs mono kicker" style="left:140px; top:90px; color:#e08a66;">Honest limits</div>
+        <div id="t4" class="abs" style="left:140px; top:150px; font-family:var(--font-display); font-size:136px; font-weight:400; letter-spacing:-0.03em; line-height:1;">The model is weak.</div>
+        <div id="t4b" class="abs" style="left:140px; top:320px; font-family:var(--font-display); font-style:italic; font-size:68px; color:#5ec4b4;">We say so.</div>
+        <div id="a1" class="stat panel" style="left:140px;"><div class="big">0.6974</div><div class="lbl">test ROC-AUC</div></div>
+        <div id="a2" class="stat panel" style="left:700px;"><div class="big">17 <span style="font-size:48px; color:#a3aaa3;">of 100</span></div><div class="lbl">flagged people actually default</div></div>
+        <div id="a3" class="stat panel" style="left:1260px;"><div class="big">42 <span style="font-size:48px; color:#a3aaa3;">of 100</span></div><div class="lbl">defaulters are caught</div></div>
+        <div id="bandlabel" class="abs mono" style="left:140px; top:790px; font-size:26px; color:#a3aaa3; opacity:0;">Measured default rate per risk band (validation sample)</div>
+        <div id="b1" class="band" style="left:140px; border-color:#4ac58e;"><div class="p">2.84%</div><div class="t">Low</div></div>
+        <div id="b2" class="band" style="left:600px; border-color:#e6be46;"><div class="p">7.56%</div><div class="t">Medium</div></div>
+        <div id="b3" class="band" style="left:1060px; border-color:#f08c46;"><div class="p">18.28%</div><div class="t">High</div></div>
+        <div id="b4" class="band" style="left:1520px; width:260px; border-color:#eb5a64;"><div class="p">30.88%</div><div class="t">Very high</div></div>
+      </div>
+
+      <!-- ===== Scene 5: outro ===== -->
+      <div id="s5" class="scene clip" data-start="25.5" data-duration="4.5" data-track-index="0">
+        <div id="g5" class="glow" style="left:310px; top:-100px; width:1300px; height:1300px;"></div>
+        <div id="logo" class="abs">Data Dynamo</div>
+        <div id="rule" class="abs"></div>
+        <div id="disc5" class="abs">Educational demo. Not a real lending decision.</div>
+        <div id="url" class="abs">ai-credit-scoring-theta.vercel.app</div>
+      </div>
+
+      <div id="fadeout"></div>
+
+      <!-- ===== Audio ===== -->
+      <audio id="music" data-start="0" data-duration="30" data-track-index="10" data-volume="0.35" data-fade-in="1" data-fade-out="3" src="assets/music/bed.mp3"></audio>
+      <audio id="k-a" data-start="0.6" data-duration="0.3" data-track-index="11" data-volume="0.35" src="assets/sfx/keypress-001.wav"></audio>
+      <audio id="k-b" data-start="1.0" data-duration="0.3" data-track-index="12" data-volume="0.35" src="assets/sfx/keypress-002.wav"></audio>
+      <audio id="k-c" data-start="1.4" data-duration="0.3" data-track-index="11" data-volume="0.35" src="assets/sfx/keypress-003.wav"></audio>
+      <audio id="k-d" data-start="1.8" data-duration="0.3" data-track-index="12" data-volume="0.35" src="assets/sfx/keypress-004.wav"></audio>
+      <audio id="k-e" data-start="2.2" data-duration="0.3" data-track-index="11" data-volume="0.35" src="assets/sfx/keypress-002.wav"></audio>
+      <audio id="clk1" data-start="7.0" data-duration="0.3" data-track-index="13" data-volume="0.5" src="assets/sfx/click_003.ogg"></audio>
+      <audio id="clk2" data-start="10.3" data-duration="0.3" data-track-index="13" data-volume="0.5" src="assets/sfx/click_003.ogg"></audio>
+      <audio id="r1" data-start="14.02" data-duration="0.4" data-track-index="14" data-volume="0.4" src="assets/sfx/rollover2.ogg"></audio>
+      <audio id="r2" data-start="15.02" data-duration="0.4" data-track-index="15" data-volume="0.4" src="assets/sfx/rollover2.ogg"></audio>
+      <audio id="r3" data-start="16.02" data-duration="0.4" data-track-index="14" data-volume="0.4" src="assets/sfx/rollover2.ogg"></audio>
+      <audio id="r4" data-start="17.02" data-duration="0.4" data-track-index="15" data-volume="0.4" src="assets/sfx/rollover2.ogg"></audio>
+      <audio id="imp" data-start="20.02" data-duration="0.5" data-track-index="16" data-volume="0.45" src="assets/sfx/impactSoft_medium_001.ogg"></audio>
+      <audio id="bong" data-start="26.1" data-duration="0.5" data-track-index="17" data-volume="0.4" src="assets/sfx/bong_001.ogg"></audio>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const E = "power3.out";
+      const fin = (sel, t, d = 0.6, y = 24) => tl.fromTo(sel, { opacity: 0, y }, { opacity: 1, y: 0, duration: d, ease: E }, t);
+
+      // build typed title chars
+      const TITLE = "AI CREDIT SCORING SYSTEM";
+      const titleEl = document.getElementById("title");
+      const chars = [...TITLE].map((ch) => {
+        const s = document.createElement("span");
+        s.className = "c";
+        s.innerHTML = (ch === " " ? "&nbsp;" : ch) + '<i class="cur"></i>';
+        titleEl.appendChild(s);
+        return s;
+      });
+
+      // scene crossfades (0.6s overlap)
+      tl.fromTo("#s1", { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "none" }, 0);
+      tl.to("#s1", { opacity: 0, duration: 0.6, ease: "none" }, 5.5);
+      tl.fromTo("#s2", { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "none" }, 5.5);
+      tl.to("#s2", { opacity: 0, duration: 0.6, ease: "none" }, 11.5);
+      tl.fromTo("#s3", { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "none" }, 11.5);
+      tl.to("#s3", { opacity: 0, duration: 0.6, ease: "none" }, 19.5);
+      tl.fromTo("#s4", { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "none" }, 19.5);
+      tl.to("#s4", { opacity: 0, duration: 0.6, ease: "none" }, 25.5);
+      tl.fromTo("#s5", { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "none" }, 25.5);
+      tl.to("#fadeout", { opacity: 1, duration: 0.6, ease: "none" }, 29.4);
+
+      // ---- Scene 1 ----
+      fin("#k1", 0.3);
+      const T0 = 0.5, STEP = 0.08;
+      chars.forEach((c, i) => {
+        const t = T0 + i * STEP;
+        tl.set(c, { opacity: 1 }, t);
+        tl.set(c.querySelector(".cur"), { opacity: 1 }, t);
+        if (i < chars.length - 1) tl.set(c.querySelector(".cur"), { opacity: 0 }, t + STEP);
+      });
+      fin("#sub", 3.0, 0.7);
+      fin("#disc", 3.6, 0.6, 12);
+      tl.fromTo("#g1", { opacity: 0.4, scale: 0.92 }, { opacity: 1, scale: 1.05, duration: 5.5, ease: "sine.inOut" }, 0);
+
+      // ---- Scene 2 ----
+      tl.to("#st1", { opacity: 1, duration: 0.5 }, 6.0);
+      tl.to("#st2", { opacity: 1, duration: 0.5 }, 7.1);
+      tl.to("#st3", { opacity: 1, duration: 0.5 }, 10.4);
+      tl.fromTo("#fc", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, 5.9);
+      // cursor path: to Fill button (page coords: card at 820,150 + button at 52,128 -> approx 1000,300)
+      tl.set("#cursor", { x: 1500, y: 700, opacity: 0 }, 5.9);
+      tl.to("#cursor", { opacity: 1, duration: 0.3 }, 6.0);
+      tl.to("#cursor", { x: 960, y: 300, duration: 0.9, ease: "power2.inOut" }, 6.05);
+      tl.to("#fill", { scale: 0.96, duration: 0.08 }, 7.0);
+      tl.to("#fill", { scale: 1, duration: 0.14 }, 7.08);
+      tl.to("#fill", { backgroundColor: "#148074", color: "#ffffff", duration: 0.2 }, 7.0);
+      ["#fc .frow:nth-of-type(1)"];
+      const rows = document.querySelectorAll("#fc .frow");
+      rows.forEach((r, i) => tl.fromTo(r, { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.4, ease: E }, 7.3 + i * 0.3));
+      tl.to("#submit", { opacity: 1, duration: 0.4 }, 9.3);
+      tl.to("#cursor", { x: 990, y: 870, duration: 0.8, ease: "power2.inOut" }, 9.45);
+      tl.to("#submit", { scale: 0.96, duration: 0.08 }, 10.3);
+      tl.to("#submit", { scale: 1, duration: 0.14 }, 10.38);
+
+      // ---- Scene 3 ----
+      fin("#h3", 12.0);
+      fin("#ill", 12.3, 0.5, 10);
+      tl.fromTo("#scalepanel", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, 12.1);
+      tl.fromTo("#marker", { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.7, ease: "back.out(1.4)" }, 13.0);
+      tl.fromTo("#factors", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, 13.4);
+      // beat-grid: factor rows at 14.02, 15.02, 16.02 (strong cue, beat-locked), 17.02
+      [["#fr1", 14.02], ["#fr2", 15.02], ["#fr3", 16.02], ["#fr4", 17.02]].forEach(([s, t]) =>
+        tl.fromTo(s, { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.5, ease: E }, t)
+      );
+      tl.fromTo("#f1", { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.6, ease: E }, 14.52);
+      tl.fromTo("#f2", { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.6, ease: E }, 15.52);
+      tl.fromTo("#f3", { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.6, ease: E }, 16.52);
+
+      // ---- Scene 4 ----
+      fin("#k4", 19.9, 0.5, 10);
+      // beat-locked: 20.02s (strong cue)
+      tl.fromTo("#t4", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, 20.02);
+      fin("#t4b", 21.0, 0.6, 16);
+      fin("#a1", 21.52, 0.6, 24);
+      fin("#a2", 22.52, 0.6, 24);
+      fin("#a3", 23.52, 0.6, 24);
+      tl.fromTo("#bandlabel", { opacity: 0 }, { opacity: 1, duration: 0.5 }, 23.4);
+      ["#b1", "#b2", "#b3", "#b4"].forEach((s, i) => fin(s, 23.6 + i * 0.2, 0.5, 16));
+
+      // ---- Scene 5 ----
+      fin("#logo", 26.0, 0.9, 20);
+      tl.fromTo("#rule", { scaleX: 0, opacity: 0 }, { scaleX: 1, opacity: 1, duration: 0.7, ease: E }, 26.7);
+      fin("#disc5", 27.1, 0.6, 12);
+      fin("#url", 27.8, 0.6, 12);
+      tl.fromTo("#g5", { opacity: 0.3 }, { opacity: 1, duration: 3, ease: "sine.out" }, 25.8);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
